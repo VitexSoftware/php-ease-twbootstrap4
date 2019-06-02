@@ -1,0 +1,33 @@
+{
+    "name": "vitexsoftware/ease-twbootstrap4",
+    "description": "Set of Twitter Bootstrap 4 rendering objects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vítězslav Vitex Dvořák",
+            "email": "info@vitexsoftware.cz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "vitexsoftware/ease-html": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ease\\TWB\\": "src/Ease/TWB/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
+            "Test\\Ease\\Html\\": "vendor/vitexsoftware/ease-html/tests/src/Ease/Html/",
+            "Test\\Ease\\TWB4\\": "testing/src/Ease/TWB/",
+            "Test\\": "testing/",
+            "Example\\Ease\\TWB4\\": "Examples"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8"
+    }
+}
