@@ -15,14 +15,14 @@
     },
     "autoload": {
         "psr-4": {
-            "Ease\\TWB\\": "src/Ease/TWB4/"
+            "Ease\\TWB4\\": "src/Ease/TWB4/"
         }
     },
     "autoload-dev": {
         "psr-4": {
             "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
             "Test\\Ease\\Html\\": "vendor/vitexsoftware/ease-html/tests/src/Ease/Html/",
-            "Test\\Ease\\TWB4\\": "testing/src/Ease/TWB/",
+            "Test\\Ease\\TWB4\\": "testing/src/Ease/TWB4/",
             "Test\\": "testing/",
             "Example\\Ease\\TWB4\\": "Examples"
         }
