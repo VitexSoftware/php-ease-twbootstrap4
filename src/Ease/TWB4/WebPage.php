@@ -13,11 +13,22 @@ namespace Ease\TWB4;
 class WebPage extends \Ease\WebPage
 {
     /**
-     * Boostrap URL Strart path with ./ to use local one.
-     *
-     * @var string relative path/url
+     * Where to look for bootstrap stylesheet
+     * @var string path or url 
      */
-    public $mainStyle = 'bootstrap4/css/bootstrap.css';
+    public $bootstrapCSS = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+
+    /**
+     * Where to look for bootstrap stylesheet theme
+     * @var string path or url 
+     */
+    public $bootstrapThemeCSS = '';
+
+    /**
+     * Where to look for bootstrap stylesheet scripts
+     * @var string path or url 
+     */
+    public $bootstrapJavaScript = 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js';
 
     /**
      * Stránka s podporou pro twitter bootstrap.
@@ -27,10 +38,11 @@ class WebPage extends \Ease\WebPage
     public function __construct($pageTitle = null)
     {
         parent::__construct($pageTitle);
-        $this->includeCss($this->mainStyle, ($this->mainStyle[0] != '.'));
+        Part::twBootstrapize();
+
         $this->head->addItem(
             '<meta charset="utf-8">'.
-            '<meta name="viewport" content="width=device-width,initial-scale=1.0">'
+            '<meta name="width=device-width, initial-scale=1, shrink-to-fit=no">'
         );
     }
 
