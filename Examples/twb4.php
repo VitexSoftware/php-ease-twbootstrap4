@@ -2,7 +2,7 @@
 
 namespace Ease\Example;
 
-include_once '../../vendor/autoload.php';
+include_once dirname(__DIR__).'/vendor/autoload.php';
 
 $oPage = new \Ease\TWB4\WebPage('Twitter Bootstrap 4 Page');
 
@@ -12,13 +12,13 @@ $oPage->addItem(new \Ease\Html\H2Tag('Alert'));
 
 
 $oPage->addItem(new \Ease\TWB4\Alert('success',
-    [new \Ease\Html\StrongTag('Well done!'), 'You successfully read this important alert message.']));
+        [new \Ease\Html\StrongTag('Well done!'), 'You successfully read this important alert message.']));
 $oPage->addItem(new \Ease\TWB4\Alert('info',
-    [new \Ease\Html\StrongTag('Heads up!'), 'This alert needs your attention, but it\'s not super important.']));
+        [new \Ease\Html\StrongTag('Heads up!'), 'This alert needs your attention, but it\'s not super important.']));
 $oPage->addItem(new \Ease\TWB4\Alert('warning',
-    [new \Ease\Html\StrongTag('Warning!'), 'Better check yourself, you\'re not looking too good.']));
+        [new \Ease\Html\StrongTag('Warning!'), 'Better check yourself, you\'re not looking too good.']));
 $oPage->addItem(new \Ease\TWB4\Alert('danger',
-    [new \Ease\Html\StrongTag('Oh snap!'), 'Change a few things up and try submitting again.']));
+        [new \Ease\Html\StrongTag('Oh snap!'), 'Change a few things up and try submitting again.']));
 
 $oPage->addItem(new \Ease\Html\H2Tag('Badge'));
 
