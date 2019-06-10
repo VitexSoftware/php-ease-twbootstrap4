@@ -8,7 +8,28 @@ $oPage = new \Ease\TWB4\WebPage('Twitter Bootstrap 4 Page');
 
 $oPage->addItem(new \Ease\Html\H1Tag('Twitter Bootstrap 4'));
 
-$oPage->addItem(new \Ease\Html\H2Tag('Alert'));
+
+
+$navBar = new \Ease\TWB4\Navbar('TWB4', 'myNavBar',
+    ['class' => 'navbar-expand-lg navbar-light bg-light']);
+
+$navBar->addMenuItem(new \Ease\Html\ATag('twb4.php',
+        ['Home', new \Ease\Html\SpanTag('(current)', ['class' => 'sr-only'])]));
+
+$navBar->addMenuItem(new \Ease\Html\ATag('#', 'Link'));
+$navBar->addMenuItem(new \Ease\TWB4\DropdownLink('Dropdown Link', 'link',
+        ['index.php' => _('Main Page'), 'login.php' => _('Login Page')],
+        ['class' => 'btn-link']));
+$navBar->addMenuItem(new \Ease\Html\ATag('#', 'Link'), false);
+
+
+$oPage->addItem($navBar);
+
+$oPage->addItem(new \Ease\TWB4\DropdownButton('Dropdown button', 'link',
+        ['index.php' => _('Main Page'), 'login.php' => _('Login Page')],
+        ['class' => 'btn-link']));
+
+$oPage->addItem(new \Ease\Html\H2Tag('Alerts'));
 
 
 $oPage->addItem(new \Ease\TWB4\Alert('success',

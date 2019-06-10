@@ -7,7 +7,7 @@
 
 namespace Ease\TWB4;
 
-class Part extends \Ease\JQuery\Part
+class Part extends \Ease\Part
 {
 
     /**
