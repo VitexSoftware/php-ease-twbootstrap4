@@ -7,3 +7,13 @@ Ease Framework Twitter Bootstrap 4 Support
  * [PillBadge.php](src/Ease/TWB4/PillBadge.php)                                                                                                                                                                                                                   
  * [WebPage.php](src/Ease/TWB4/WebPage.php)  
 
+Requirements
+------------
+
+[vitexsoftware/ease-html](https://github.com/VitexSoftware/ease-html)
+
+
+Installation
+------------
+
+composer require vitexsoftware/ease-twbootstrap4
