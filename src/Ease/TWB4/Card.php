@@ -16,12 +16,14 @@ use Ease\Html\DivTag;
  */
 class Card extends DivTag
 {
-    public function __construct($content = null, $properties = []){
-        if(array_key_exists('class', $properties)){
-            $prperties['class'] = 'card '.$prperties['class'];
+
+    public function __construct($content = null, $properties = [])
+    {
+        if (is_array($properties) && array_key_exists('class', $properties)) {
+            $properties['class'] = 'card '.$properties['class'];
         } else {
-            $prperties['class'] = 'card';
+            $properties['class'] = 'card';
         }
-        parent::__construct($content,$properties);
+        parent::__construct($content, $properties);
     }
 }

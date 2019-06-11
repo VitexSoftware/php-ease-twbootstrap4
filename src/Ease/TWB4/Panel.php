@@ -23,7 +23,7 @@ class Panel extends Card
      *
      * @var \Ease\Html\DivTag
      */
-    public $heading = null;
+    public $header = null;
 
     /**
      * Tělo panelu.
@@ -54,13 +54,13 @@ class Panel extends Card
      * @param mixes        $body    tělo panelu
      * @param mixed        $footer  patička panelu. FALSE = nezobrazit vůbec
      */
-    public function __construct($heading = null, $type = 'default',
-                                $body = null, $footer = null)
+    public function __construct($heading = null, $type = null, $body = null,
+                                $footer = null)
     {
-        parent::__construct();
-        $this->heading = new DivTag($heading, ['style' => 'card-header']);
-        $this->body    = new DivTag($body, ['style' => 'card-body']);
-        $this->footer  = new DivTag($footer, ['style' => 'card-footer']);
+        parent::__construct(null, strlen($type) ? ['class' => 'bg-'.$type] : null );
+        $this->header = new DivTag($heading, ['class' => 'card-header']);
+        $this->body   = new DivTag($body, ['class' => 'card-body']);
+        $this->footer = new DivTag($footer, ['class' => 'card-footer']);
     }
 
     /**
@@ -80,15 +80,14 @@ class Panel extends Card
 
     public function finalize()
     {
-        if ($this->header->getItemCount()) {
-            $this->addItem($this->header);
+        if ($this->header->getItemsCount()) {
+            parent::addItem($this->header);
         }
-        if ($this->body->getItemCount()) {
-            $this->addItem($this->body);
+        if ($this->body->getItemsCount()) {
+            parent::addItem($this->body);
         }
-        if ($this->footer->getItemCount()) {
-            $this->addItem($this->footer);
+        if ($this->footer->getItemsCount()) {
+            parent::addItem($this->footer);
         }
     }
 }
-    

@@ -58,4 +58,12 @@ foreach ($types as $type => $tmsg) {
     $oPage->addItem(new \Ease\TWB4\PillBadge($type, $tmsg));
 }
 
+$oPage->addItem(new \Ease\Html\H2Tag('Card: Panel'));
+
+$panel = new \Ease\TWB4\Panel( _('Panel Example'), null, _('Example panel body'), _('Example panel footer'));
+$panel->addItem(new \Ease\Html\DivTag(_('Example Panel Row Added')));
+
+
+$oPage->addItem($panel);
+
 $oPage->draw();
