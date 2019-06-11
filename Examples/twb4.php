@@ -20,7 +20,12 @@ $navBar->addMenuItem(new \Ease\Html\ATag('#', 'Link'));
 $navBar->addMenuItem(new \Ease\TWB4\DropdownLink('Dropdown Link', 'link',
         ['index.php' => _('Main Page'), 'login.php' => _('Login Page')],
         ['class' => 'btn-link']));
+
+
+
 $navBar->addMenuItem(new \Ease\Html\ATag('#', 'Link'), false);
+
+$navBar->addDropDownMenu( _('SubMenu'), ['index.php' => _('Main Page'), 'login.php' => _('Login Page')] );
 
 
 $oPage->addItem($navBar);
@@ -58,7 +63,7 @@ foreach ($types as $type => $tmsg) {
     $oPage->addItem(new \Ease\TWB4\PillBadge($type, $tmsg));
 }
 
-$oPage->addItem(new \Ease\Html\H2Tag('Card: Panel'));
+$oPage->addItem(new \Ease\Html\H2Tag('Card: Panel, Well'));
 
 $panel = new \Ease\TWB4\Panel( _('Panel Example'), null, _('Example panel body'), _('Example panel footer'));
 $panel->addItem(new \Ease\Html\DivTag(_('Example Panel Row Added')));

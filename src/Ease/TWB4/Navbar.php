@@ -55,6 +55,11 @@ class Navbar extends \Ease\Html\NavTag
             ['class' => 'navbar-nav mr-auto']);
     }
 
+    /**
+     * 
+     * @param type $content
+     * @param type $enabled
+     */
     public function addMenuItem($content, $enabled = true)
     {
         $contentClass[] = 'nav-item';
@@ -82,12 +87,31 @@ class Navbar extends \Ease\Html\NavTag
                 ['class' => implode(' ', $contentClass)]));
     }
 
+    /**
+     * Add Dropdown menu to nav
+     * 
+     * @param string $label submenu label
+     * @param array  $items ['url'=>'label','url2'=>'label2','divider1'=>'',...]
+     */
+    public function addDropDownMenu($label, $items)
+    {
+        $this->addMenuItem( new \Ease\TWB4\DropdownLink($label, 'link',$items,['class' => 'btn-link']) );
+    }
+
+    /**
+     * Navbar collapse helper
+     * 
+     * @return \Ease\Html\DivTagnavbar collapse
+     */
     public function navbarCollapse()
     {
         return new \Ease\Html\DivTag([$this->leftContent, $this->rightContent],
             ['class' => 'collapse navbar-collapse', 'id' => $this->navBarName.'SupportedContent']);
     }
 
+    /**
+     * 
+     */
     public function finalize()
     {
         $this->addItem($this->navbarCollapse());
