@@ -14,5 +14,5 @@ Conflicts: ease-framework
 Suggests: php-ease-bricks
 Section: web
 Priority: optional
-Description: Set of Twitter Bootstrap 3 rendering objects
- TWB3 classes for Ease Framework.
+Description: Set of Twitter Bootstrap 4 rendering objects
+ TWB4 classes for Ease Framework.
