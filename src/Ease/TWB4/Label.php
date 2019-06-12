@@ -13,18 +13,19 @@ namespace Ease\TWB4;
 class Label extends Card
 {
     /**
+     * TWB3 Backward compatibility Label
      * 
-     * @param string $type
-     * @param mixed $content
-     * @param array $poperties
+     * @param string $type       alert|success|danger| etc...
+     * @param mixed  $content    Content inside label
+     * @param array  $properties additonal properrties for Card
      */
-    public function __construct($type, $content , $poperties)
+    public function __construct($type, $content , $properties = [])
     {
         if(array_key_exists('class', $properties)){
-            $poperties['class']='bg-'.$type.' '.$poperties['class'];
+            $properties['class']='bg-'.$type.' '.$properties['class'];
         } else {
-            $poperties['class']='bg-'.$type;
+            $properties['class']='bg-'.$type;
         }
-        parent::__construct($content = null, $poperties);
+        parent::__construct($content, $properties);
     }
 }
