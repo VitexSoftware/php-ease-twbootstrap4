@@ -1,0 +1,40 @@
+{
+    "name": "deb/ease-twbootstrap4",
+    "description": "Set of Twitter Bootstrap 4 rendering objects (debianized)",
+    "version": "0.1",
+    "authors": [
+        {
+            "name": "Vítězslav Dvořák",
+            "email": "info@vitexsoftware.cz",
+            "homepage": "http://v.s.cz/"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ease\\TWB4\\": "."
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "deb/ease-html": "*"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/usr/share/php/Ease",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/usr/share/php/EaseHtml",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "type": "library",
+    "homepage": "http://v.s.cz/ease.php",
+    "license": "GPL-2.0+"
+}

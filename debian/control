@@ -1,0 +1,18 @@
+Source: php-ease-twbootstrap4
+Build-Depends: debhelper (>= 7.0.50~)
+Section: web
+Standards-Version: 3.9.8
+Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
+Uploaders: Vitex <vitex@hippy.cz>
+Priority: optional
+Homepage: https://github.com/VitexSoftware/ease-twbootstrap4
+
+Package: php-ease-twbootstrap4
+Depends: ${misc:Depends},php-ease-html
+Architecture: all
+Conflicts: ease-framework
+Suggests: php-ease-bricks
+Section: web
+Priority: optional
+Description: Set of Twitter Bootstrap 3 rendering objects
+ TWB3 classes for Ease Framework.
