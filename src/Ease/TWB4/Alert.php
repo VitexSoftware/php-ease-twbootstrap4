@@ -3,9 +3,10 @@
 namespace Ease\TWB4;
 
 /**
- * Description of Alert
+ * Twitter Bootrstap4 Alert.
  *
- * @author vitex
+ * @author    Vitex <vitex@hippy.cz>
+ * @copyright 2019 Vitex@hippy.cz (G)
  */
 class Alert extends \Ease\Html\DivTag
 {
