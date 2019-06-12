@@ -1,11 +1,32 @@
+![Project Logo](https://raw.githubusercontent.com/VitexSoftware/ease-twbootstrap4/master/twbootstrap4.png)
+
 Ease Framework Twitter Bootstrap 4 Support
 ==========================================
 
- * [Alert.php](src/Ease/TWB4/Alert.php)                                                                                                                                                                                                                       
- * [Badge.php](src/Ease/TWB4/Badge.php)                                                                                                                                                                                                                       
- * [Part.php](src/Ease/TWB4/Part.php)                                                                                                                                                                                                                        
- * [PillBadge.php](src/Ease/TWB4/PillBadge.php)                                                                                                                                                                                                                   
- * [WebPage.php](src/Ease/TWB4/WebPage.php)  
+
+ * [Alert.php](src/Ease/TWB4/Alert.php)
+ * [Badge.php](src/Ease/TWB4/Badge.php)
+ * [Card.php](src/Ease/TWB4/Card.php)
+ * [Col.php](src/Ease/TWB4/Col.php)
+ * [Container.php](src/Ease/TWB4/Container.php)
+ * [ContainerFluid.php](src/Ease/TWB4/Container.php)
+ * [DropdownButton.php](src/Ease/TWB4/DropdownButton.php)
+ * [DropdownLink.php](src/Ease/TWB4/DropdownLink.php)
+ * [Form.php](src/Ease/TWB4/Form.php)
+ * [FormGroup.php](src/Ease/TWB4/FormGroup.php)
+ * [Label.php](src/Ease/TWB4/Label.php) Bootstrap3 Compatibility
+ * [LinkButton.php](src/Ease/TWB4/LinkButton.php)
+ * [Navbar.php](src/Ease/TWB4/Navbar.php)
+ * [Panel.php](src/Ease/TWB4/Panel.php) Bootstrap3 Compatibility
+ * [Part.php](src/Ease/TWB4/Part.php)
+ * [PillBadge.php](src/Ease/TWB4/PillBadge.php)
+ * [Row.php](src/Ease/TWB4/Row.php)
+ * [Badge.php](src/Ease/TWB4/Badge.php)
+ * [Part.php](src/Ease/TWB4/Part.php)
+ * [PillBadge.php](src/Ease/TWB4/PillBadge.php)
+ * [SubmitButton.php](src/Ease/TWB4/SubmitButton.php
+ * [WebPage.php](src/Ease/TWB4/WebPage.php)
+
 
 Requirements
 ------------
@@ -16,4 +37,7 @@ Requirements
 Installation
 ------------
 
+```
 composer require vitexsoftware/ease-twbootstrap4
+```
+
