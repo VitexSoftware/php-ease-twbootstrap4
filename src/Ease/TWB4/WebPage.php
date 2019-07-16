@@ -42,7 +42,7 @@ class WebPage extends \Ease\WebPage
 
         $this->head->addItem(
             '<meta charset="utf-8">'.
-            '<meta name="width=device-width, initial-scale=1, shrink-to-fit=no">'
+            '<meta name="width=device-width, initial-scale=1">'
         );
     }
 
