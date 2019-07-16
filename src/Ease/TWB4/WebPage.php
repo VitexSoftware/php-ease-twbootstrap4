@@ -87,7 +87,7 @@ class WebPage extends \Ease\WebPage
                     if ($messageType == 'error') {
                         $messageType = 'danger';
                     }
-                    $htmlFargment .= '<div class="alert alert-'.$messageType.'" >'.$message.'</div>'."\n";
+                    $htmlFargment .= '<div role="alert" class="alert alert-'.$messageType.'" >'.$message.'</div>'."\n";
                 } else {
                     $htmlFargment .= '<div class="alert">'.$message.'</div>'."\n";
                 }
