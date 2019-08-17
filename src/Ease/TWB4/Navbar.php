@@ -68,11 +68,11 @@ class Navbar extends \Ease\Html\NavTag
             $content->addTagClass('disabled');
         }
 
-        switch (self::baseClassName($content)) {
+        switch (\Ease\Functions::baseClassName($content)) {
             case 'ATag':
                 $content->addTagClass('nav-link');
                 if (basename(parse_url($content->getTagProperty('href'),
-                            PHP_URL_PATH)) == basename(\Ease\Page::phpSelf())) {
+                            PHP_URL_PATH)) == basename(\Ease\Document::phpSelf())) {
                     $contentClass[] = 'active';
                 }
 
@@ -95,7 +95,7 @@ class Navbar extends \Ease\Html\NavTag
      */
     public function addDropDownMenu($label, $items)
     {
-        $this->addMenuItem( new \Ease\TWB4\DropdownLink($label, 'link',$items,['class' => 'btn-link']) );
+        $this->addMenuItem( new \Ease\TWB4\NavItemDropDown($label, $items) );
     }
 
     /**
