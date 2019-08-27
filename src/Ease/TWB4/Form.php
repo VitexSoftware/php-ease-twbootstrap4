@@ -34,7 +34,7 @@ class Form extends \Ease\Html\Form
     public function &addItem($pageItem, $pageItemName = null)
     {
         if (is_object($pageItem) && method_exists($pageItem, 'setTagClass')) {
-            if (strtolower($pageItem->tagType) == 'select') {
+            if (strtolower($pageItem->getTagType()) == 'select') {
                 $pageItem->setTagClass(trim(str_replace('form_control', '',
                             $pageItem->getTagClass().' form-control')));
             } elseif ($pageItem->getTagProperty('type') == 'file') {

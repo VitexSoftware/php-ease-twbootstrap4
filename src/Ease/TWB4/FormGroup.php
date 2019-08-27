@@ -24,7 +24,7 @@ class FormGroup extends \Ease\Html\DivTag
             $id = null;
         }
         if (is_null($id)) {
-            $formKey = \Ease\Brick::lettersOnly($label);
+            $formKey = \Ease\Functions::lettersOnly($label);
         } else {
             $formKey = $id;
         }

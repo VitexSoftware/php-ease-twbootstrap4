@@ -55,16 +55,9 @@ class WebPage extends \Ease\WebPage
      */
     public function getStatusMessagesAsHtml($what = null)
     {
-        /*
-         * Session Singleton Problem hack
-         */
-        if (!count($this->easeShared->statusMessages)) {
-            return '';
-        }
         $htmlFargment = '';
-
         $allMessages = [];
-        foreach ($this->easeShared->statusMessages as $quee => $messages) {
+        foreach (\Ease\Shared::singleton()->getStatusMessages() as $quee => $messages) {
             foreach ($messages as $msgID => $message) {
                 $allMessages[$msgID][$quee] = $message;
             }
