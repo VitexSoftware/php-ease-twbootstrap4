@@ -5,7 +5,7 @@ namespace Ease\TWB4;
 /**
  * Odznak bootstrapu.
  */
-class Badge extends \Ease\Html\Span
+class Badge extends \Ease\Html\SpanTag
 {
 
     /**

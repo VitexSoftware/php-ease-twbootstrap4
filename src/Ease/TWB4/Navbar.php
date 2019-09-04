@@ -1,11 +1,23 @@
 <?php
-/**
- * Bootstrap4 NavBar.
- */
 
 namespace Ease\TWB4;
 
-class Navbar extends \Ease\Html\NavTag
+use Ease\Document;
+use Ease\Functions;
+use Ease\Html\ATag;
+use Ease\Html\ButtonTag;
+use Ease\Html\DivTag;
+use Ease\Html\LiTag;
+use Ease\Html\NavTag;
+use Ease\Html\SpanTag;
+use Ease\Html\UlTag;
+use Ease\TWB4\NavItemDropDown;
+use Ease\TWB4\Part;
+
+/**
+ * Bootstrap4 NavBar.
+ */
+class Navbar extends NavTag
 {
     /**
      * Vnitřek menu.
@@ -23,7 +35,7 @@ class Navbar extends \Ease\Html\NavTag
     /**
      * Položky menu přidávané vpravo.
      *
-     * @var \Ease\Html\UlTag
+     * @var UlTag
      */
     private $rightContent = null;
 
@@ -46,13 +58,11 @@ class Navbar extends \Ease\Html\NavTag
         $properties['class'] = trim('navbar '.$originalClass);
         $this->navBarName    = $name;
 
-        parent::__construct([new \Ease\Html\ATag('#', $brand,
-                ['class' => 'navbar-brand']), $this->navBarToggler()],
-            $properties);
+        parent::__construct([new ATag('#', $brand, ['class' => 'navbar-brand']),
+            $this->navBarToggler()], $properties);
         Part::twBootstrapize();
 
-        $this->leftContent = new \Ease\Html\UlTag(null,
-            ['class' => 'navbar-nav mr-auto']);
+        $this->leftContent = new UlTag(null, ['class' => 'navbar-nav mr-auto']);
     }
 
     /**
@@ -68,11 +78,11 @@ class Navbar extends \Ease\Html\NavTag
             $content->addTagClass('disabled');
         }
 
-        switch (\Ease\Functions::baseClassName($content)) {
+        switch (Functions::baseClassName($content)) {
             case 'ATag':
                 $content->addTagClass('nav-link');
                 if (basename(parse_url($content->getTagProperty('href'),
-                            PHP_URL_PATH)) == basename(\Ease\Document::phpSelf())) {
+                            PHP_URL_PATH)) == basename(Document::phpSelf())) {
                     $contentClass[] = 'active';
                 }
 
@@ -83,7 +93,7 @@ class Navbar extends \Ease\Html\NavTag
                 break;
         }
 
-        $this->leftContent->addItem(new \Ease\Html\LiTag($content,
+        $this->leftContent->addItem(new LiTag($content,
                 ['class' => implode(' ', $contentClass)]));
     }
 
@@ -95,7 +105,7 @@ class Navbar extends \Ease\Html\NavTag
      */
     public function addDropDownMenu($label, $items)
     {
-        $this->addMenuItem( new \Ease\TWB4\NavItemDropDown($label, $items) );
+        $this->addMenuItem(new NavItemDropDown($label, $items));
     }
 
     /**
@@ -105,7 +115,7 @@ class Navbar extends \Ease\Html\NavTag
      */
     public function navbarCollapse()
     {
-        return new \Ease\Html\DivTag([$this->leftContent, $this->rightContent],
+        return new DivTag([$this->leftContent, $this->rightContent],
             ['class' => 'collapse navbar-collapse', 'id' => $this->navBarName.'SupportedContent']);
     }
 
@@ -120,7 +130,7 @@ class Navbar extends \Ease\Html\NavTag
 
     public function navBarToggler()
     {
-        return new \Ease\Html\ButtonTag(new \Ease\Html\SpanTag(null,
+        return new ButtonTag(new SpanTag(null,
                 ['class' => 'navbar-toggler-icon']),
             [
             'class' => 'navbar-toggler',
