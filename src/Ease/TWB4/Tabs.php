@@ -11,7 +11,7 @@ use Ease\Html\UlTag;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class Tabs extends UlTag
+class Tabs extends \Ease\Container
 {
     /**
      *
@@ -33,7 +33,7 @@ class Tabs extends UlTag
     public function __construct($tabs = [], $properties = array())
     {
         parent::__construct(null, $properties);
-        $this->addTagClass('nav nav-tabs');
+        $this->tabs = $tabs;
     }
 
     /**
@@ -66,21 +66,28 @@ class Tabs extends UlTag
     /**
      * Tabs Handles
      * 
-     * @return array
+     * @return UlTag
      */
     public function tabHandles()
     {
-        $handles = [];
+        $handles = new UlTag(null, ['class'=>'nav nav-tabs']);
         foreach ($this->tabs as $tabName => $tabContent) {
             $id           = self::strToID($tabName);
-            $handles[$id] = new LiTag(null, ['class' => 'nav-item']);
-            $tab          = $handles[$id]->addItem(new DivTag($tabContent,
-                    ['class' => 'nav-link', 'id' => $id.'-tab', 'data-toggle' => 'tab',
-                    'href' => '#'.$id, 'aria-controls' => $id, 'aria-selected' => strval($tabName
-                        == $this->activeTab)]));
+
+            $properties = [
+                'class' => 'nav-link', 
+                'id'=>$id.'-tab',
+                'data-toggle' => 'tab', 
+                'role'=>'tab', 
+                'aria-controls' => $id, 
+                'aria-selected' => strval($tabName == $this->activeTab) ];
+            
             if ($tabName == $this->activeTab) {
-                $tab->addTagClass('active');
+                $properties['class'] .= ' active';
             }
+            
+            $handles->addItemSmart( new \Ease\Html\ATag('#'.$id, $tabContent, $properties  )   , ['class'=>'nav-item']);
+            
         }
         return $handles;
     }
