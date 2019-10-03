@@ -1,4 +1,4 @@
-![Project Logo](https://raw.githubusercontent.com/VitexSoftware/ease-twbootstrap4/master/twbootstrap4.png)
+![Project Logo](https://raw.githubusercontent.com/VitexSoftware/ease-twbootstrap4/master/project-logo.png)
 
 Ease Framework Twitter Bootstrap 4 Support
 ==========================================
