@@ -1,7 +1,8 @@
-php-ease-twbootstrap4 (0.5) UNRELEASED; urgency=medium
+php-ease-twbootstrap4 (0.6) UNRELEASED; urgency=medium
 
   * First release
   * Label extend
   * Label extend
+  * Tabs OK now
 
- -- Vítězslav Dvořák <vitex@develoid.jinonice.czf>  Wed, 12 Jun 2019 17:10:33 +0200
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Sat, 12 Oct 2019 14:40:17 +0200

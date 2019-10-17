@@ -1,2 +1,7 @@
 /vendor/
 /nbproject/private/
+/debian/php-ease-twbootstrap4/
+/debian/.debhelper/
+/debian/debhelper-build-stamp
+/debian/php-ease-twbootstrap4.debhelper.log
+/debian/php-ease-twbootstrap4.substvars

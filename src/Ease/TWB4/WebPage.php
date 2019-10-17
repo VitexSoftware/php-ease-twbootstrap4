@@ -46,47 +46,4 @@ class WebPage extends \Ease\WebPage
         );
     }
 
-    /**
-     * Vrací zprávy uživatele.
-     *
-     * @param string $what info|warning|error|success
-     *
-     * @return string
-     */
-    public function getStatusMessagesAsHtml($what = null)
-    {
-        $htmlFargment = '';
-        $allMessages = [];
-        foreach (\Ease\Shared::singleton()->getStatusMessages() as $quee => $messages) {
-            foreach ($messages as $msgID => $message) {
-                $allMessages[$msgID][$quee] = $message;
-            }
-        }
-        ksort($allMessages);
-        foreach ($allMessages as $messages) {
-            $messageType = key($messages);
-
-            if (is_array($what)) {
-                if (!in_array($messageType, $what)) {
-                    continue;
-                }
-            }
-
-            foreach ($messages as $message) {
-                if (is_object($this->logger)) {
-                    if (!isset($this->logger->logStyles[$messageType])) {
-                        $messageType = 'notice';
-                    }
-                    if ($messageType == 'error') {
-                        $messageType = 'danger';
-                    }
-                    $htmlFargment .= '<div role="alert" class="alert alert-'.$messageType.'" >'.$message.'</div>'."\n";
-                } else {
-                    $htmlFargment .= '<div class="alert">'.$message.'</div>'."\n";
-                }
-            }
-        }
-
-        return $htmlFargment;
-    }
 }
