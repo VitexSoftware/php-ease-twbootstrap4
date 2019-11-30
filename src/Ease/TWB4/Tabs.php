@@ -27,10 +27,10 @@ class Tabs extends \Ease\Container
 
     /**
      * 
-     * @param type $tabs
-     * @param type $properties
+     * @param array $tabs
+     * @param array $properties
      */
-    public function __construct($tabs = [], $properties = array())
+    public function __construct($tabs = [], $properties = [])
     {
         parent::__construct(null, $properties);
         $this->tabs = $tabs;
