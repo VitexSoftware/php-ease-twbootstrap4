@@ -70,24 +70,24 @@ class Tabs extends \Ease\Container
      */
     public function tabHandles()
     {
-        $handles = new UlTag(null, ['class'=>'nav nav-tabs']);
+        $handles = new UlTag(null, ['class' => 'nav nav-tabs']);
         foreach ($this->tabs as $tabName => $tabContent) {
-            $id           = self::strToID($tabName);
+            $id = self::strToID($tabName);
 
             $properties = [
-                'class' => 'nav-link', 
-                'id'=>$id.'-tab',
-                'data-toggle' => 'tab', 
-                'role'=>'tab', 
-                'aria-controls' => $id, 
-                'aria-selected' => strval($tabName == $this->activeTab) ];
-            
+                'class' => 'nav-link',
+                'id' => $id.'-tab',
+                'data-toggle' => 'tab',
+                'role' => 'tab',
+                'aria-controls' => $id,
+                'aria-selected' => strval($tabName == $this->activeTab)];
+
             if ($tabName == $this->activeTab) {
                 $properties['class'] .= ' active';
             }
-            
-            $handles->addItemSmart( new \Ease\Html\ATag('#'.$id, $tabContent, $properties  )   , ['class'=>'nav-item']);
-            
+
+            $handles->addItemSmart(new \Ease\Html\ATag('#'.$id, $tabName,
+                    $properties), ['class' => 'nav-item']);
         }
         return $handles;
     }
@@ -113,14 +113,14 @@ class Tabs extends \Ease\Container
     }
 
     /**
-     * 
+     * Assembling
      */
     public function finalize()
     {
-        if(empty($this->activeTab)){
+        if (empty($this->activeTab)) {
             $this->activeTab = key($this->tabs);
         }
-            
+
         $this->addItem($this->tabHandles());
         $this->addItem($this->tabBodies());
         parent::finalize();
