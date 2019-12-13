@@ -4,7 +4,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 namespace Ease\TWB4;
+
 /**
  * TWB3 Compatibility class
  * 
@@ -12,6 +14,7 @@ namespace Ease\TWB4;
  */
 class Label extends Card
 {
+
     /**
      * TWB3 Backward compatibility Label
      * 
@@ -19,12 +22,12 @@ class Label extends Card
      * @param mixed  $content    Content inside label
      * @param array  $properties additonal properrties for Card
      */
-    public function __construct($type, $content , $properties = [])
+    public function __construct($type, $content, $properties = [])
     {
-        if(array_key_exists('class', $properties)){
-            $properties['class']='bg-'.$type.' '.$properties['class'];
+        if (array_key_exists('class', $properties)) {
+            $properties['class'] = 'bg-'.$type.' '.$properties['class'];
         } else {
-            $properties['class']='bg-'.$type;
+            $properties['class'] = 'bg-'.$type;
         }
         parent::__construct($content, $properties);
     }

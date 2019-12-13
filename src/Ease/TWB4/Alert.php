@@ -4,7 +4,6 @@ namespace Ease\TWB4;
 
 use Ease\Html\DivTag;
 
-
 /**
  * Twitter Bootrstap4 Alert.
  *

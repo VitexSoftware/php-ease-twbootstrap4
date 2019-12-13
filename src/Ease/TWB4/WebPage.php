@@ -45,5 +45,4 @@ class WebPage extends \Ease\WebPage
             '<meta name="viewport" content="width=device-width, initial-scale=1">'
         );
     }
-
 }

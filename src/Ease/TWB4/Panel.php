@@ -57,7 +57,8 @@ class Panel extends Card
     public function __construct($heading = null, $type = null, $body = null,
                                 $footer = null)
     {
-        parent::__construct(null, strlen($type) ? ['class' => 'bg-'.$type] : null );
+        parent::__construct(null,
+            strlen($type) ? ['class' => 'bg-'.$type] : null );
         $this->header = new DivTag($heading, ['class' => 'card-header']);
         $this->body   = new DivTag($body, ['class' => 'card-body']);
         $this->footer = new DivTag($footer, ['class' => 'card-footer']);

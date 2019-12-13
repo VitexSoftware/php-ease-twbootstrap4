@@ -15,6 +15,7 @@ Ease Framework Twitter Bootstrap 4 Support
  * [Alert.php](src/Ease/TWB4/Alert.php)
  * [Badge.php](src/Ease/TWB4/Badge.php)
  * [Card.php](src/Ease/TWB4/Card.php)
+ * [Carousel.php](src/Ease/TWB4/Carousel.php)
  * [Col.php](src/Ease/TWB4/Col.php)
  * [Container.php](src/Ease/TWB4/Container.php)
  * [ContainerFluid.php](src/Ease/TWB4/Container.php)
@@ -62,4 +63,3 @@ Example Page
 See [Example](Examples/twb4.php)
 
 ![Example](https://raw.githubusercontent.com/VitexSoftware/ease-twbootstrap4/master/example.png)
-
