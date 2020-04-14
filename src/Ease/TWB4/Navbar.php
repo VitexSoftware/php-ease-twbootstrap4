@@ -40,6 +40,13 @@ class Navbar extends NavTag
     private $rightContent = null;
 
     /**
+     * Brand link destination
+     * @var string 
+     */
+    public $mainpage = '#';
+
+
+    /**
      * Menu aplikace.
      *
      * @param string $brand
@@ -58,7 +65,7 @@ class Navbar extends NavTag
         $properties['class'] = trim('navbar '.$originalClass);
         $this->navBarName    = $name;
 
-        parent::__construct([new ATag('#', $brand, ['class' => 'navbar-brand']),
+        parent::__construct([new ATag($this->mainpage, $brand, ['class' => 'navbar-brand']),
             $this->navBarToggler()], $properties);
         Part::twBootstrapize();
 
