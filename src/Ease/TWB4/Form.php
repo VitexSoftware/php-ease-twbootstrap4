@@ -1,12 +1,28 @@
 <?php
+
 /**
  * Formulář Bootstrapu.
  */
 
 namespace Ease\TWB4;
 
-class Form extends \Ease\Html\Form
-{
+class Form extends \Ease\Html\Form {
+
+    public $formDiv = null;
+
+    /**
+     * Bootstrap Form
+     * 
+     * @see https://getbootstrap.com/docs/4.1/components/forms/
+     * 
+     * @param array $formProperties    FormTag properties eg. ['enctype' => 'multipart/form-data']
+     * @param array $formDivProperties FormDiv propertise eg. ['class'=>'form-row align-items-center']
+     * @param mixed $formContents      Any other initial content
+     */
+    public function __construct($formProperties = [], $formDivProperties = [], $formContents = null) {
+        parent::__construct($formProperties);
+        $this->formDiv = parent::addItem(new \Ease\Html\DivTag($formContents, $formDivProperties));
+    }
 
     /**
      * Vloží prvek do formuláře.
@@ -17,10 +33,9 @@ class Form extends \Ease\Html\Form
      * @param string $helptext    Dodatečná nápověda
      */
     public function addInput($input, $caption = null, $placeholder = null,
-                             $helptext = null)
-    {
+            $helptext = null) {
         return $this->addItem(new FormGroup($caption, $input, $placeholder,
-                    $helptext));
+                                $helptext));
     }
 
     /**
@@ -31,18 +46,18 @@ class Form extends \Ease\Html\Form
      *
      * @return pointer Odkaz na vložený objekt
      */
-    public function &addItem($pageItem, $pageItemName = null)
-    {
+    public function &addItem($pageItem, $pageItemName = null) {
         if (is_object($pageItem) && method_exists($pageItem, 'setTagClass')) {
             if (strtolower($pageItem->getTagType()) == 'select') {
                 $pageItem->setTagClass(trim(str_replace('form_control', '',
-                            $pageItem->getTagClass().' form-control')));
+                                        $pageItem->getTagClass() . ' form-control')));
             } elseif ($pageItem->getTagProperty('type') == 'file') {
                 $pageItem->setTagClass('form-control-file');
             }
         }
-        $added = parent::addItem($pageItem, $pageItemName);
+        $added = $this->formDiv->addItem($pageItem, $pageItemName);
 
         return $added;
     }
+
 }

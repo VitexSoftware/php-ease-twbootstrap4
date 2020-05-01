@@ -40,6 +40,13 @@ class Navbar extends NavTag
     private $rightContent = null;
 
     /**
+     * Brand link destination
+     * @var string 
+     */
+    public $mainpage = '#';
+
+
+    /**
      * Menu aplikace.
      *
      * @param string $brand
@@ -58,7 +65,7 @@ class Navbar extends NavTag
         $properties['class'] = trim('navbar '.$originalClass);
         $this->navBarName    = $name;
 
-        parent::__construct([new ATag('#', $brand, ['class' => 'navbar-brand']),
+        parent::__construct([new ATag($this->mainpage, $brand, ['class' => 'navbar-brand']),
             $this->navBarToggler()], $properties);
         Part::twBootstrapize();
 
@@ -66,9 +73,12 @@ class Navbar extends NavTag
     }
 
     /**
+     * Add new Menu Item into navbar
      * 
-     * @param type $content
-     * @param type $enabled
+     * @param mixed $content
+     * @param boolean $enabled
+     *
+     * @return LiTag MenuItem added
      */
     public function addMenuItem($content, $enabled = true)
     {
@@ -93,7 +103,7 @@ class Navbar extends NavTag
                 break;
         }
 
-        $this->leftContent->addItem(new LiTag($content,
+        return $this->leftContent->addItem(new LiTag($content,
                 ['class' => implode(' ', $contentClass)]));
     }
 
@@ -102,10 +112,12 @@ class Navbar extends NavTag
      * 
      * @param string $label submenu label
      * @param array  $items ['url'=>'label','url2'=>'label2','divider1'=>'',...]
+     * 
+     * @return NavItemDropDown
      */
     public function addDropDownMenu($label, $items)
     {
-        $this->addMenuItem(new NavItemDropDown($label, $items));
+        return $this->addMenuItem(new NavItemDropDown($label, $items));
     }
 
     /**
