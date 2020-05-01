@@ -8,7 +8,7 @@ Priority: optional
 Homepage: https://github.com/VitexSoftware/ease-twbootstrap4
 
 Package: php-ease-twbootstrap4
-Depends: ${misc:Depends},php-ease-html
+Depends: ${misc:Depends},php-ease-html,javascript-common
 Architecture: all
 Conflicts: ease-framework
 Suggests: php-ease-bricks
