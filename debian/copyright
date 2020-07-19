@@ -1,9 +1,9 @@
 Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat?action=recall&rev=143
-Upstream-Name: ease-twbootstrap
-Upstream-Source: https://github.com/VitexSoftware/ease-twbootstrap/archive/master.zip
+Upstream-Name: ease-bootstrap
+Upstream-Source: https://github.com/VitexSoftware/ease-bootstrap/archive/master.zip
 
 Files: *
-Homepage: https://github.com/VitexSoftware/ease-twbootstrap
+Homepage: https://github.com/VitexSoftware/ease-bootstrap
 Copyright:
   (c) 2013 Vítězslav Dvořák (v.s.cz)
 License: MIT 

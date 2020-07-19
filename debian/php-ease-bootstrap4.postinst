@@ -2,7 +2,7 @@
 
 #DEBHELPER#
 
-# postinst script for php-ease-twbootstrap4
+# postinst script for php-ease-bootstrap4
 #
 # see: dh_installdeb(1)
 
@@ -24,7 +24,7 @@ set -e
 case "$1" in
     configure)
 
-        composer-global-update deb/ease-twbootstrap4
+        composer-global-update deb/ease-bootstrap4
 	if [ -f /usr/sbin/a2enconf ]; then
 	    a2enconf javascript-common
 	fi

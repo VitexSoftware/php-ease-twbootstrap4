@@ -16,12 +16,12 @@ minimal template of composer.json
     "require": {
         "deb/ease-core": "*",
         "deb/ease-html": "*",
-        "deb/ease-twbootstrap4": "*"
+        "deb/ease-bootstrap4": "*"
     },
     "repositories": [
         {
             "type": "path",
-            "url": "/usr/share/php/Ease",
+            "url": "/usr/share/php/EaseCore",
             "options": {
                 "symlink": true
             }

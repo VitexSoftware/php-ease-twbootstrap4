@@ -1,34 +1,35 @@
 {
-    "name": "deb/ease-twbootstrap4",
-    "description": "Set of Twitter Bootstrap 4 rendering objects (debianized)",
-    "version": "0.1",
-    "authors": [
-        {
-            "name": "Vítězslav Dvořák",
-            "email": "info@vitexsoftware.cz",
-            "homepage": "http://v.s.cz/"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Ease\\TWB4\\": "."
-        }
+  "name": "deb/ease-bootstrap4",
+  "description": "Set of Twitter Bootstrap 4 rendering objects (debianized)",
+  "version": "0.1",
+  "authors": [
+    {
+      "name": "Vítězslav Dvořák",
+      "email": "info@vitexsoftware.cz",
+      "homepage": "http://v.s.cz/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Ease\\TWB4\\": "."
+    }
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "deb/ease-html": "*"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseCore"
     },
-    "minimum-stability": "dev",
-    "require": {
-        "deb/ease-html": "*"
-    },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/usr/share/php/Ease"
-        },
-        {
-            "type": "path",
-            "url": "/usr/share/php/EaseHtml"
-        }
-    ],
-    "type": "library",
-    "homepage": "http://v.s.cz/ease.php",
-    "license": "GPL-2.0+"
+    {
+      "type": "path",
+      "url": "/usr/share/php/EaseHtml"
+    }
+  ],
+  "type": "library",
+  "homepage": "http://v.s.cz/ease.php",
+  "license": "GPL-2.0+",
+  "address": "0.7.5"
 }

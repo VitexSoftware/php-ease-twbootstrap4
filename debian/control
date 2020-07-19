@@ -1,13 +1,13 @@
-Source: php-ease-twbootstrap4
+Source: php-ease-bootstrap4
 Build-Depends: debhelper (>= 7.0.50~)
 Section: web
 Standards-Version: 3.9.8
 Maintainer: Vítězslav Dvořák <info@vitexsoftware.cz>
 Uploaders: Vitex <vitex@hippy.cz>
 Priority: optional
-Homepage: https://github.com/VitexSoftware/ease-twbootstrap4
+Homepage: https://github.com/VitexSoftware/ease-bootstrap4
 
-Package: php-ease-twbootstrap4
+Package: php-ease-bootstrap4
 Depends: ${misc:Depends},php-ease-html,javascript-common
 Architecture: all
 Conflicts: ease-framework

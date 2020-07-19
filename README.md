@@ -1,10 +1,10 @@
-![Project Logo](https://raw.githubusercontent.com/VitexSoftware/ease-twbootstrap4/master/project-logo.png)
+![Project Logo](https://raw.githubusercontent.com/VitexSoftware/ease-bootstrap4/master/project-logo.png)
 
-[![Latest Stable Version](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/v/stable)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
-[![Total Downloads](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/downloads)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
-[![License](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/license)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
-[![Monthly Downloads](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/d/monthly)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
-[![Daily Downloads](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/d/daily)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
+[![Latest Stable Version](https://poser.pugx.org/vitexsoftware/ease-bootstrap4/v/stable)](https://packagist.org/packages/vitexsoftware/ease-bootstrap4)
+[![Total Downloads](https://poser.pugx.org/vitexsoftware/ease-bootstrap4/downloads)](https://packagist.org/packages/vitexsoftware/ease-bootstrap4)
+[![License](https://poser.pugx.org/vitexsoftware/ease-bootstrap4/license)](https://packagist.org/packages/vitexsoftware/ease-bootstrap4)
+[![Monthly Downloads](https://poser.pugx.org/vitexsoftware/ease-bootstrap4/d/monthly)](https://packagist.org/packages/vitexsoftware/ease-bootstrap4)
+[![Daily Downloads](https://poser.pugx.org/vitexsoftware/ease-bootstrap4/d/daily)](https://packagist.org/packages/vitexsoftware/ease-bootstrap4)
 
 
 
@@ -47,13 +47,13 @@ Installation
 ------------
 
 ```
-composer require vitexsoftware/ease-twbootstrap4
+composer require vitexsoftware/ease-bootstrap4
 ```
 
 Also you can use debian package:
 
 ```
-sudo apt install php-ease-twbootstrap4
+sudo apt install php-ease-bootstrap4
 ```
 
 
@@ -62,4 +62,4 @@ Example Page
 
 See [Example](Examples/twb4.php)
 
-![Example](https://raw.githubusercontent.com/VitexSoftware/ease-twbootstrap4/master/example.png)
+![Example](https://raw.githubusercontent.com/VitexSoftware/ease-bootstrap4/master/example.png)

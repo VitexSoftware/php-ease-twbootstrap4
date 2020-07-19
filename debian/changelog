@@ -1,4 +1,4 @@
-php-ease-twbootstrap4 (0.7.1) UNRELEASED; urgency=medium
+php-ease-bootstrap4 (0.7.5) UNRELEASED; urgency=medium
 
   [ Vítězslav Dvořák ]
   * First release
@@ -9,5 +9,12 @@ php-ease-twbootstrap4 (0.7.1) UNRELEASED; urgency=medium
   [ CyberVitexus ]
   * composer-global-update fix
   * enable javascript-common
+  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
+  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
+  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
+  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
+  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
+  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
+  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Fri, 01 May 2020 18:18:20 +0200
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Sun, 19 Jul 2020 15:23:11 +0200

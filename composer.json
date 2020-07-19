@@ -1,5 +1,5 @@
 {
-    "name": "vitexsoftware/ease-twbootstrap4",
+    "name": "vitexsoftware/ease-bootstrap4",
     "description": "Set of Twitter Bootstrap 4 rendering objects",
     "type": "library",
     "license": "MIT",
@@ -9,9 +9,8 @@
             "email": "info@vitexsoftware.cz"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "vitexsoftware/ease-html": "dev-master"
+        "vitexsoftware/ease-html": ">= 1.23"
     },
     "autoload": {
         "psr-4": {
