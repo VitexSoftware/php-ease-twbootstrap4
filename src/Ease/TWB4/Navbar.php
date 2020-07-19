@@ -67,8 +67,6 @@ class Navbar extends NavTag
 
         parent::__construct([new ATag($this->mainpage, $brand, ['class' => 'navbar-brand']),
             $this->navBarToggler()], $properties);
-        Part::twBootstrapize();
-
         $this->leftContent = new UlTag(null, ['class' => 'navbar-nav mr-auto']);
     }
 

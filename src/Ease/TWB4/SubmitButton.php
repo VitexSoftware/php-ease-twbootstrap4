@@ -22,6 +22,5 @@ class SubmitButton extends \Ease\Html\ButtonTag
             $properties['class'] = 'btn btn-'.$type;
         }
         parent::__construct($value, $properties);
-        Part::twBootstrapize();
     }
 }

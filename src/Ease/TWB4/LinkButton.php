@@ -36,6 +36,5 @@ class LinkButton extends \Ease\Html\ATag
         }
         $properties['class'] .= $class;
         parent::__construct($href, $contents, $properties);
-        Part::twBootstrapize();
     }
 }
