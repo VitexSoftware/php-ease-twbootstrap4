@@ -18,5 +18,6 @@ php-ease-bootstrap4 (0.7.5) UNRELEASED; urgency=medium
   * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
   * Debian package renamed
   * Debian package workflow
+  * Allow submenu to be place on right side
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Mon, 27 Jul 2020 17:20:55 +0200
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Sun, 16 Aug 2020 11:07:32 +0200
