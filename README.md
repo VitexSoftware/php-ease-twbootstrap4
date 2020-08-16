@@ -1,4 +1,4 @@
-![Project Logo](https://raw.githubusercontent.com/VitexSoftware/ease-twbootstrap4/master/project-logo.png)
+![Project Logo](project-logo.png?raw=true)
 
 [![Latest Stable Version](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/v/stable)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
 [![Total Downloads](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/downloads)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
