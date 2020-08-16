@@ -109,13 +109,14 @@ class Navbar extends NavTag {
     /**
      * Add Dropdown menu to nav
      * 
-     * @param string $label submenu label
-     * @param array  $items ['url'=>'label','url2'=>'label2','divider1'=>'',...]
+     * @param string $label     submenu label
+     * @param array  $items     ['url'=>'label','url2'=>'label2','divider1'=>'',...]
+     * @param string $placement "left" is default
      * 
      * @return NavItemDropDown
      */
-    public function addDropDownMenu($label, $items) {
-        return $this->addMenuItem(new NavItemDropDown($label, $items));
+    public function addDropDownMenu($label, $items, $placement = 'left') {
+        return $this->addMenuItem(new NavItemDropDown($label, $items), true, $placement);
     }
 
     /**
