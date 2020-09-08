@@ -1,9 +1,10 @@
 <?php
 
+namespace Ease\Example;
+
 use Ease\TWB4\Tabs;
 use Ease\TWB4\WebPage;
 
-namespace Ease\Example;
 
 include_once dirname(__DIR__).'/vendor/autoload.php';
 
