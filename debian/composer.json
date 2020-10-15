@@ -1,7 +1,7 @@
 {
   "name": "deb/ease-bootstrap4",
   "description": "Set of Twitter Bootstrap 4 rendering objects (debianized)",
-  "version": "0.1",
+  "version": "1.1",
   "authors": [
     {
       "name": "Vítězslav Dvořák",
@@ -31,5 +31,5 @@
   "type": "library",
   "homepage": "http://v.s.cz/ease.php",
   "license": "GPL-2.0+",
-  "address": "0.7.5"
+  "address": "1.0"
 }

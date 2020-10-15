@@ -1,2 +1,4 @@
-php-ease-bootstrap4_0.7.5_all.deb web optional
-php-ease-bootstrap4_0.7.5_amd64.buildinfo web optional
+php-vitexsoftware-ease-bootstrap4-dev_1.1_all.deb web optional
+php-vitexsoftware-ease-bootstrap4-doc_1.1_all.deb devel optional
+php-vitexsoftware-ease-bootstrap4_1.1_all.deb web optional
+php-vitexsoftware-ease-bootstrap4_1.1_amd64.buildinfo web optional

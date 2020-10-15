@@ -1,8 +1,7 @@
-php-ease-bootstrap4 (0.7.5) UNRELEASED; urgency=medium
+php-vitexsoftware-ease-bootstrap4 (1.1) UNRELEASED; urgency=medium
 
   [ Vítězslav Dvořák ]
   * First release
-  * Label extend
   * Label extend
   * Tabs OK now
 
@@ -10,14 +9,9 @@ php-ease-bootstrap4 (0.7.5) UNRELEASED; urgency=medium
   * composer-global-update fix
   * enable javascript-common
   * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
-  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
-  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
-  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
-  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
-  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
-  * Merge branch 'master' of github.com:VitexSoftware/ease-twbootstrap4
   * Debian package renamed
   * Debian package workflow
   * Allow submenu to be place on right side
+  * v1.0 release
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Sun, 16 Aug 2020 11:07:32 +0200
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Fri, 16 Oct 2020 01:13:03 +0200

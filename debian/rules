@@ -6,9 +6,16 @@ BUILD_DIR:=build
 %:
 	dh $@
 
+override_dh_prep:
+	rm docs/* -rf
+	phpdoc -d src --title "Vitex Software's Ease Twitter Bootstrap4"
+	mv .phpdoc/build/* docs
+	dh_prep
+
+
 override_dh_auto_test:
 	echo tests temporarly skipped for now in rules file
 
 override_dh_install:
-	jq '.address = "'`dpkg-parsechangelog | sed -n 's/^Version: //p'`'"' debian/composer.json |sponge debian/composer.json
+	jq '.version = "'`dpkg-parsechangelog | sed -n 's/^Version: //p'`'"' debian/composer.json |sponge debian/composer.json
 	dh_install

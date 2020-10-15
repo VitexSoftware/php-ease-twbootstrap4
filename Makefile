@@ -27,10 +27,10 @@ fresh:
 
 clean:
 	rm -rf vendor composer.lock
-	rm -rf debian/php-ease-bootstrap
-	rm -rf debian/php-ease-bootstrap-doc
+	rm -rf debian/php-vitexsoftware-ease-bootstrap4
+	rm -rf debian/php-vitexsoftware-ease-bootstrap4-doc
 	rm -rf debian/*.log debian/tmp
-	rm -rf docs/*
+	rm -rf .phpdoc/*
 
 apigen:
 	VERSION=`cat debian/composer.json | grep version | awk -F'"' '{print $4}'`; \
