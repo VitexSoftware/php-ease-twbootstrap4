@@ -1,0 +1,13 @@
+docs/classes/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/classes
+docs/css/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/css
+docs/files/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/files
+docs/graphs/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/graphs
+docs/index.html		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/
+docs/indices/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/indices
+docs/js/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/js
+docs/namespaces/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/namespaces
+docs/packages/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/packages
+docs/reports/*		usr/share/doc/php-vitexsoftware-ease-bootstrap4/html/reports
+
+debian/php-vitexsoftware-ease-bootstrap4-doc.conf	usr/share/doc/php-vitexsoftware-ease-bootstrap4-doc/apache
+README.md			usr/share/doc/php-vitexsoftware-ease-bootstrap4

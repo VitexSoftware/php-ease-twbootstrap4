@@ -5,3 +5,13 @@
 /debian/debhelper-build-stamp
 /debian/php-ease-bootstrap4.debhelper.log
 /debian/php-ease-bootstrap4.substvars
+/debian/php-vitexsoftware-ease-bootstrap4-dev/
+/debian/php-vitexsoftware-ease-bootstrap4/
+/debian/php-vitexsoftware-ease-bootstrap4-doc/
+/debian/php-vitexsoftware-ease-bootstrap4-doc.debhelper.log
+/debian/php-vitexsoftware-ease-bootstrap4-doc.substvars
+/debian/php-vitexsoftware-ease-bootstrap4.debhelper.log
+/debian/php-vitexsoftware-ease-bootstrap4.substvars
+/debian/php-vitexsoftware-ease-bootstrap4-dev.substvars
+/debian/php-vitexsoftware-ease-bootstrap4-dev.debhelper.log
+/.phpdoc/
