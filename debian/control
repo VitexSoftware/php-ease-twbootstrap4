@@ -8,7 +8,7 @@ Priority: optional
 Homepage: https://github.com/VitexSoftware/ease-bootstrap4
 
 Package: php-vitexsoftware-ease-bootstrap4
-Depends: ${misc:Depends},php-ease-html,javascript-common
+Depends: ${misc:Depends},php-vitexsoftware-ease-html,javascript-common
 Architecture: all
 Conflicts: ease-framework
 Suggests: php-ease-bricks
