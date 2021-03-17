@@ -45,10 +45,11 @@ class Tabs extends \Ease\Container
      */
     public function addTab($label, $content, $active = false)
     {
-        $this->tabs[$label] = $content;
+        $this->tabs[$label] = \Ease\Document::embedablize($content) ;
         if ($active === true) {
             $this->activeTab = $label;
         }
+        return $this->tabs[$label];
     }
 
     /**
