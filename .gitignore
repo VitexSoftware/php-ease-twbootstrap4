@@ -15,3 +15,4 @@
 /debian/php-vitexsoftware-ease-bootstrap4-dev.substvars
 /debian/php-vitexsoftware-ease-bootstrap4-dev.debhelper.log
 /.phpdoc/
+/docs/

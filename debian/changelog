@@ -1,4 +1,4 @@
-php-vitexsoftware-ease-bootstrap4 (1.4) UNRELEASED; urgency=medium
+php-vitexsoftware-ease-bootstrap4 (1.6) UNRELEASED; urgency=medium
 
   [ Vítězslav Dvořák ]
   * First release
@@ -16,5 +16,7 @@ php-vitexsoftware-ease-bootstrap4 (1.4) UNRELEASED; urgency=medium
   * Docs added
   * Dependency fix II
   * Dependency fix II
+  * Return added card
+  * Return added card
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Mon, 15 Mar 2021 23:19:18 +0100
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Wed, 17 Mar 2021 21:00:52 +0100

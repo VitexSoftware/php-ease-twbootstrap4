@@ -23,7 +23,7 @@ class FormGroup extends \Ease\Html\DivTag
         } else {
             $id = null;
         }
-        if (is_null($id)) {
+        if (is_null($id) && !empty($label)) {
             $formKey = \Ease\Functions::lettersOnly($label);
         } else {
             $formKey = $id;
