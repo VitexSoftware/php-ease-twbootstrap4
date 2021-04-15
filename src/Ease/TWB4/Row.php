@@ -1,6 +1,9 @@
 <?php
 /**
  * Twitter Bootrstap Row.
+ *
+ * @author    Vitex <vitex@hippy.cz>
+ * @copyright 2009-2021 Vitex@hippy.cz (G)
  */
 
 namespace Ease\TWB4;
@@ -12,10 +15,12 @@ class Row extends \Ease\Html\DivTag
      * Twitter Bootrstap Row.
      *
      * @param mixed $content Prvotní obsah
+     * @param array $properties Of Row Div 
      */
-    public function __construct($content = null)
+    public function __construct($content = null, $properties = [])
     {
-        parent::__construct($content, ['class' => 'row']);
+        parent::__construct($content,  $properties);
+        $this->addTagClass('row');
     }
 
     /**
