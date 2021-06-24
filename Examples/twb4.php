@@ -1,5 +1,7 @@
 <?php
 
+namespace Ease\Example;
+
 use Ease\Html\ATag;
 use Ease\Html\DivTag;
 use Ease\Html\H1Tag;
@@ -16,9 +18,10 @@ use Ease\TWB4\Panel;
 use Ease\TWB4\PillBadge;
 use Ease\TWB4\WebPage;
 
-namespace Ease\Example;
 
 include_once dirname(__DIR__).'/vendor/autoload.php';
+
+new \Ease\Locale('en_US','','');
 
 $oPage = new WebPage('Twitter Bootstrap 4 Page');
 

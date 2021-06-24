@@ -1,4 +1,4 @@
-php-vitexsoftware-ease-bootstrap4 (1.6) UNRELEASED; urgency=medium
+php-vitexsoftware-ease-bootstrap4 (1.7) UNRELEASED; urgency=medium
 
   [ Vítězslav Dvořák ]
   * First release
@@ -18,5 +18,6 @@ php-vitexsoftware-ease-bootstrap4 (1.6) UNRELEASED; urgency=medium
   * Dependency fix II
   * Return added card
   * Return added card
+  * FormGroup do not crash on button
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Wed, 17 Mar 2021 21:00:52 +0100
+ -- CyberVitexus <vitex@exiv.jinonice.czf>  Wed, 17 Mar 2021 21:27:03 +0100
