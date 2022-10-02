@@ -18,11 +18,10 @@ class Breadcrumb extends \Ease\Html\NavTag {
      *
      * @link https://getbootstrap.com/docs/4.0/components/breadcrumb/
      *
-     * @param string $type       success|info|warning|danger
      * @param mixed $content     to insert in
      * @param array $properties  additional
      */
-    public function __construct($type, $content = null, $properties = []) {
+    public function __construct($content = null, $properties = []) {
         $properties['aria-label'] = 'breadcrumb';
         parent::__construct($content, $properties);
         $this->ol = parent::addItem(new \Ease\Html\OlTag($content, ['class' => 'breadcrumb']));
