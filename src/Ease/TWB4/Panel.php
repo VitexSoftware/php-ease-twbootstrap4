@@ -1,4 +1,5 @@
 <?php
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,8 +17,8 @@ use \Ease\Html\DivTag;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class Panel extends Card
-{
+class Panel extends Card {
+
     /**
      * Hlavička panelu.
      *
@@ -55,12 +56,10 @@ class Panel extends Card
      * @param mixed        $footer  patička panelu. FALSE = nezobrazit vůbec
      */
     public function __construct($heading = null, $type = null, $body = null,
-                                $footer = null)
-    {
-        parent::__construct(null,
-            strlen($type) ? ['class' => 'bg-'.$type] : null );
+            $footer = null) {
+        parent::__construct(null, $type ? ['class' => 'bg-' . $type] : null );
         $this->header = new DivTag($heading, ['class' => 'card-header']);
-        $this->body   = new DivTag($body, ['class' => 'card-body']);
+        $this->body = new DivTag($body, ['class' => 'card-body']);
         $this->footer = new DivTag($footer, ['class' => 'card-footer']);
     }
 
@@ -72,15 +71,13 @@ class Panel extends Card
      *
      * @return pointer Odkaz na vložený objekt
      */
-    public function &addItem($pageItem, $pageItemName = null)
-    {
+    public function &addItem($pageItem, $pageItemName = null) {
         $added = $this->body->addItem($pageItem, $pageItemName);
 
         return $added;
     }
 
-    public function finalize()
-    {
+    public function finalize() {
         if ($this->header->getItemsCount()) {
             parent::addItem($this->header);
         }
@@ -91,4 +88,5 @@ class Panel extends Card
             parent::addItem($this->footer);
         }
     }
+
 }
