@@ -89,8 +89,9 @@ class Navbar extends NavTag {
 
         switch (Functions::baseClassName($content)) {
             case 'ATag':
+
                 $content->addTagClass('nav-link');
-                if (basename(parse_url($content->getTagProperty('href'),
+                if (!empty($content->getTagProperty('href'))&&basename(parse_url($content->getTagProperty('href'),
                                         PHP_URL_PATH)) == basename(Document::phpSelf())) {
                     $contentClass[] = 'active';
                 }
