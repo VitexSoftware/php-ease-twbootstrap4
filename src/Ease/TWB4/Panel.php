@@ -1,9 +1,10 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * EaseTWB4 - Panel component.
+ *
+ * @author Vítězslav Dvořák <info@vitexsoftware.cz>
+ * @copyright  2020-2024 Vitex Software
  */
 
 namespace Ease\TWB4;
@@ -13,35 +14,33 @@ use \Ease\Html\DivTag;
 /**
  * Description of Panel
  * 
- * @deprecated since version 1.0
- *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
 class Panel extends Card {
 
     /**
-     * Hlavička panelu.
+     * Panel Head
      *
      * @var \Ease\Html\DivTag
      */
     public $header = null;
 
     /**
-     * Tělo panelu.
+     * Panel's body
      *
      * @var \Ease\Html\DivTag
      */
     public $body = null;
 
     /**
-     * Patička panelu.
+     * footer content
      *
      * @var \Ease\Html\DivTag
      */
     public $footer = null;
 
     /**
-     * Typ Panelu.
+     * Panel type
      *
      * @var string succes|wanring|info|danger
      */
@@ -52,7 +51,7 @@ class Panel extends Card {
      *
      * @param string|mixed $heading
      * @param string       $type    succes|wanring|info|danger
-     * @param mixes        $body    tělo panelu
+     * @param mixed        $body    tělo panelu
      * @param mixed        $footer  patička panelu. FALSE = nezobrazit vůbec
      */
     public function __construct($heading = null, $type = null, $body = null,
