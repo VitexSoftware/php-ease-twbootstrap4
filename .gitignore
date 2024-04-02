@@ -16,3 +16,4 @@
 /debian/php-vitexsoftware-ease-bootstrap4-dev.debhelper.log
 /.phpdoc/
 /docs/
+.vscode/settings.json
