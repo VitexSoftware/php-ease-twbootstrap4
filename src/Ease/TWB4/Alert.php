@@ -12,7 +12,6 @@ use Ease\Html\DivTag;
  */
 class Alert extends DivTag
 {
-
     /**
      * Bootstrap4's Alert
      * @link https://v4-alpha.getbootstrap.com/components/alerts/
@@ -25,6 +24,6 @@ class Alert extends DivTag
     {
         $properties['role'] = 'alert';
         parent::__construct($content, $properties);
-        $this->addTagClass('alert alert-'.$type);
+        $this->addTagClass('alert alert-' . $type);
     }
 }

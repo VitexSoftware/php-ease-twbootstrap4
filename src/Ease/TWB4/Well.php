@@ -7,7 +7,6 @@ namespace Ease\TWB4;
  */
 class Well extends Card
 {
-
     /**
      * Twitter Bootrstap Well.
      *

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Twitter Bootstrap4 common class.
  *
@@ -9,7 +10,6 @@ namespace Ease\TWB4;
 
 class Part extends \Ease\Part
 {
-
     /**
      * Vložení náležitostí pro twitter bootstrap.
      */

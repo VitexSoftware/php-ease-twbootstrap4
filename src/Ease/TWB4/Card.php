@@ -1,4 +1,5 @@
 <?php
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -16,11 +17,10 @@ use Ease\Html\DivTag;
  */
 class Card extends DivTag
 {
-
     public function __construct($content = null, $properties = [])
     {
         if (is_array($properties) && array_key_exists('class', $properties)) {
-            $properties['class'] = 'card '.$properties['class'];
+            $properties['class'] = 'card ' . $properties['class'];
         } else {
             $properties['class'] = 'card';
         }

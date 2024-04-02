@@ -1,4 +1,5 @@
 <?php
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -23,23 +24,26 @@ class Carousel extends DivTag
     public $showControls   = false;
 
     /**
-     * 
-     * @var int 
+     *
+     * @var int
      */
     public $activeSlide = 0;
 
     /**
      * Carousel
-     * 
+     *
      * @param boolean $controls   show controls ?
      * @param boolean $indicators show indicators ?
      * @param boolean $captions   show captions ?
-     * 
+     *
      * @param array $properties
      */
-    public function __construct($controls = true, $indicators = true,
-                                $captions = true, $properties = [])
-    {
+    public function __construct(
+        $controls = true,
+        $indicators = true,
+        $captions = true,
+        $properties = []
+    ) {
         $this->showCaptions      = $captions;
         $this->showIndicators    = $indicators;
         $this->showControls      = $controls;
@@ -51,9 +55,11 @@ class Carousel extends DivTag
         }
     }
 
-    public function addSlide(\Ease\Embedable $content, $caption = '',
-                             $active = false)
-    {
+    public function addSlide(
+        \Ease\Embedable $content,
+        $caption = '',
+        $active = false
+    ) {
         $content->setTagClass('d-block w-100');
         $this->slides[] = $content;
         if ($this->showCaptions == true) {
@@ -69,24 +75,34 @@ class Carousel extends DivTag
      */
     public function addControls()
     {
-        $this->addItem(new \Ease\Html\ATag('#'.$this->getTagID(),
-                [new \Ease\Html\SpanTag(null,
-                    ['class' => 'carousel-control-prev-icon', 'aria-hidden' => 'true']),
+        $this->addItem(new \Ease\Html\ATag(
+            '#' . $this->getTagID(),
+            [new \Ease\Html\SpanTag(
+                null,
+                ['class' => 'carousel-control-prev-icon', 'aria-hidden' => 'true']
+            ),
                 new \Ease\Html\SpanTag(_('Previous'), ['class' => 'sr-only'])],
-                ['role' => 'button', 'data-slide' => 'prev', 'class' => 'carousel-control-prev']));
-        $this->addItem(new \Ease\Html\ATag('#'.$this->getTagID(),
-                [new \Ease\Html\SpanTag(null,
-                    ['class' => 'carousel-control-next-icon', 'aria-hidden' => 'true']),
+            ['role' => 'button', 'data-slide' => 'prev', 'class' => 'carousel-control-prev']
+        ));
+        $this->addItem(new \Ease\Html\ATag(
+            '#' . $this->getTagID(),
+            [new \Ease\Html\SpanTag(
+                null,
+                ['class' => 'carousel-control-next-icon', 'aria-hidden' => 'true']
+            ),
                 new \Ease\Html\SpanTag(_('Next'), ['class' => 'sr-only'])],
-                ['role' => 'button', 'data-slide' => 'next', 'class' => 'carousel-control-next']));
+            ['role' => 'button', 'data-slide' => 'next', 'class' => 'carousel-control-next']
+        ));
     }
 
     public function addIndicators()
     {
-        $indicators = new \Ease\Html\OlTag(null,
-            ['class' => 'carousel-indicators']);
+        $indicators = new \Ease\Html\OlTag(
+            null,
+            ['class' => 'carousel-indicators']
+        );
         foreach ($this->slides as $slideId => $slide) {
-            $slpr = ['data-target' => '#'.$this->getTagID(), 'data-slide-to' => $slideId,
+            $slpr = ['data-target' => '#' . $this->getTagID(), 'data-slide-to' => $slideId,
                 'class' => ($slideId == $this->activeSlide) ? 'active' : ''];
             $indicators->addItem(new \Ease\Html\LiTag(null, $slpr));
         }
@@ -99,16 +115,20 @@ class Carousel extends DivTag
             $this->addIndicators();
         }
 
-        $carouselInner = $this->addItem(new DivTag(null,
-                ['class' => 'carousel-inner']));
+        $carouselInner = $this->addItem(new DivTag(
+            null,
+            ['class' => 'carousel-inner']
+        ));
 
         foreach ($this->slides as $slideId => $slide) {
             $props        = ['class' => ($slideId == $this->activeSlide) ? 'carousel-item active'
                     : 'carousel-item'];
             $carouselItem = new DivTag($slide, $props);
             if ($this->showCaptions == true) {
-                $carouselItem->addItem(new DivTag($this->captions[$slideId],
-                        ['class' => 'carousel-caption d-none d-md-block']));
+                $carouselItem->addItem(new DivTag(
+                    $this->captions[$slideId],
+                    ['class' => 'carousel-caption d-none d-md-block']
+                ));
             }
             $carouselInner->addItem($carouselItem);
         }

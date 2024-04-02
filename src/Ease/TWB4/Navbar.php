@@ -17,8 +17,8 @@ use Ease\TWB4\Part;
 /**
  * Bootstrap4 NavBar.
  */
-class Navbar extends NavTag {
-
+class Navbar extends NavTag
+{
     /**
      * Vnitřek menu.
      *
@@ -41,7 +41,7 @@ class Navbar extends NavTag {
 
     /**
      * Brand link destination
-     * @var string 
+     * @var string
      */
     public $mainpage = '#';
 
@@ -52,8 +52,11 @@ class Navbar extends NavTag {
      * @param string $name
      * @param array  $properties
      */
-    public function __construct($brand = null, $name = 'navbar',
-            $properties = []) {
+    public function __construct(
+        $brand = null,
+        $name = 'navbar',
+        $properties = []
+    ) {
         if (is_array($properties) && array_key_exists('class', $properties)) {
             $originalClass = $properties['class'];
         } else {
@@ -73,14 +76,15 @@ class Navbar extends NavTag {
 
     /**
      * Add new Menu Item into navbar
-     * 
+     *
      * @param mixed   $content   to insert in menu
      * @param boolean $enabled   false give you gray nonclickable menu item
      * @param string  $placement "left" is default
      *
      * @return LiTag MenuItem added
      */
-    public function addMenuItem($content, $enabled = true, $placement = 'left') {
+    public function addMenuItem($content, $enabled = true, $placement = 'left')
+    {
         $contentClass[] = 'nav-item';
         if ($enabled === false) {
             $content->setTagProperties(['aria-disabled' => 'true', 'tabindex' => '-1']);
@@ -89,10 +93,13 @@ class Navbar extends NavTag {
 
         switch (Functions::baseClassName($content)) {
             case 'ATag':
-
                 $content->addTagClass('nav-link');
-                if (!empty($content->getTagProperty('href'))&&basename(parse_url($content->getTagProperty('href'),
-                                        PHP_URL_PATH)) == basename(Document::phpSelf())) {
+                if (
+                    !empty($content->getTagProperty('href')) && basename(parse_url(
+                        $content->getTagProperty('href'),
+                        PHP_URL_PATH
+                    )) == basename(Document::phpSelf())
+                ) {
                     $contentClass[] = 'active';
                 }
 
@@ -109,46 +116,55 @@ class Navbar extends NavTag {
 
     /**
      * Add Dropdown menu to nav
-     * 
+     *
      * @param string $label     submenu label
      * @param array  $items     ['url'=>'label','url2'=>'label2','divider1'=>'',...]
      * @param string $placement "left" is default
-     * 
+     *
      * @return NavItemDropDown
      */
-    public function addDropDownMenu($label, $items, $placement = 'left') {
+    public function addDropDownMenu($label, $items, $placement = 'left')
+    {
         return $this->addMenuItem(new NavItemDropDown($label, $items), true, $placement);
     }
 
     /**
      * Navbar collapse helper
-     * 
+     *
      * @return \Ease\Html\DivTagnavbar collapse
      */
-    public function navbarCollapse() {
-        return new DivTag([$this->leftContent, $this->rightContent],
-                ['class' => 'collapse navbar-collapse', 'id' => $this->navBarName . 'SupportedContent']);
+    public function navbarCollapse()
+    {
+        return new DivTag(
+            [$this->leftContent, $this->rightContent],
+            ['class' => 'collapse navbar-collapse', 'id' => $this->navBarName . 'SupportedContent']
+        );
     }
 
     /**
-     * 
+     *
      */
-    public function finalize() {
+    public function finalize()
+    {
         $this->addItem($this->navbarCollapse());
         parent::finalize();
     }
 
-    public function navBarToggler() {
-        return new ButtonTag(new SpanTag(null,
-                        ['class' => 'navbar-toggler-icon']),
-                [
+    public function navBarToggler()
+    {
+        return new ButtonTag(
+            new SpanTag(
+                null,
+                ['class' => 'navbar-toggler-icon']
+            ),
+            [
             'class' => 'navbar-toggler',
             'type' => 'button',
             'data-toggle' => 'collapse',
             'data-target' => '#' . $this->navBarName . 'SupportedContent',
             'aria-controls' => $this->navBarName . 'SupportedContent',
             'aria-expanded' => 'false',
-            'aria-label' => _('Toggle navigation')]);
+            'aria-label' => _('Toggle navigation')]
+        );
     }
-
 }

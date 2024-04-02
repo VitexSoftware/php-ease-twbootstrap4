@@ -9,15 +9,15 @@
 
 namespace Ease\TWB4;
 
-use \Ease\Html\DivTag;
+use Ease\Html\DivTag;
 
 /**
  * Description of Panel
- * 
+ *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class Panel extends Card {
-
+class Panel extends Card
+{
     /**
      * Panel Head
      *
@@ -54,9 +54,13 @@ class Panel extends Card {
      * @param mixed        $body    tělo panelu
      * @param mixed        $footer  patička panelu. FALSE = nezobrazit vůbec
      */
-    public function __construct($heading = null, $type = null, $body = null,
-            $footer = null) {
-        parent::__construct(null, $type ? ['class' => 'bg-' . $type] : null );
+    public function __construct(
+        $heading = null,
+        $type = null,
+        $body = null,
+        $footer = null
+    ) {
+        parent::__construct(null, $type ? ['class' => 'bg-' . $type] : null);
         $this->header = new DivTag($heading, ['class' => 'card-header']);
         $this->body = new DivTag($body, ['class' => 'card-body']);
         $this->footer = new DivTag($footer, ['class' => 'card-footer']);
@@ -70,13 +74,15 @@ class Panel extends Card {
      *
      * @return pointer Odkaz na vložený objekt
      */
-    public function &addItem($pageItem, $pageItemName = null) {
+    public function &addItem($pageItem, $pageItemName = null)
+    {
         $added = $this->body->addItem($pageItem, $pageItemName);
 
         return $added;
     }
 
-    public function finalize() {
+    public function finalize()
+    {
         if ($this->header->getItemsCount()) {
             parent::addItem($this->header);
         }
@@ -87,5 +93,4 @@ class Panel extends Card {
             parent::addItem($this->footer);
         }
     }
-
 }

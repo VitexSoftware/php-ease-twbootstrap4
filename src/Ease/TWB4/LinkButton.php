@@ -12,7 +12,6 @@ namespace Ease\TWB4;
  */
 class LinkButton extends \Ease\Html\ATag
 {
-
     /**
      * Odkazové tlačítko twbootstrabu.
      *
@@ -21,18 +20,21 @@ class LinkButton extends \Ease\Html\ATag
      * @param string $type       primary|info|success|warning|danger|inverse|link
      * @param array  $properties dodatečné vlastnosti
      */
-    public function __construct($href, $contents = null, string $type = '',
-                                $properties = [])
-    {
+    public function __construct(
+        $href,
+        $contents = null,
+        string $type = '',
+        $properties = []
+    ) {
         if (isset($properties['class'])) {
-            $class = ' '.$properties['class'];
+            $class = ' ' . $properties['class'];
         } else {
             $class = '';
         }
         if (empty($type)) {
             $properties['class'] = 'btn btn-default';
         } else {
-            $properties['class'] = 'btn btn-'.$type;
+            $properties['class'] = 'btn btn-' . $type;
         }
         $properties['class'] .= $class;
         parent::__construct($href, $contents, $properties);

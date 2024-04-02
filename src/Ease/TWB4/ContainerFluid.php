@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Twitter Bootrstap Container Fluid.
  *
@@ -10,14 +11,14 @@ namespace Ease\TWB4;
 
 class ContainerFluid extends \Ease\Html\DivTag
 {
-
     /**
      * Twitter Bootrstap fluid Container.
      *
      * @param mixed $content
      * @param array $properties of Container Row
      */
-    public function __construct($content = null, $properties = []) {
+    public function __construct($content = null, $properties = [])
+    {
         parent::__construct($content, $properties);
         $this->addTagClass('container-fluid');
     }

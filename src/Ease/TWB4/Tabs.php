@@ -14,18 +14,18 @@ class Tabs extends \Ease\Container
 {
     /**
      *
-     * @var array 
+     * @var array
      */
     private $tabs = [];
 
     /**
      *
-     * @var string 
+     * @var string
      */
     private $activeTab = '';
 
     /**
-     * 
+     *
      * @param array $tabs
      * @param array $properties
      */
@@ -37,7 +37,7 @@ class Tabs extends \Ease\Container
 
     /**
      * Add New Tab
-     * 
+     *
      * @param string  $label
      * @param mixed   $content to render in tab body
      * @param boolean $active add as active tab
@@ -53,9 +53,9 @@ class Tabs extends \Ease\Container
 
     /**
      * Convert Tab Name to ID
-     * 
-     * @param string $tabLabel 
-     * 
+     *
+     * @param string $tabLabel
+     *
      * @return string
      */
     public static function strToID($tabLabel)
@@ -65,7 +65,7 @@ class Tabs extends \Ease\Container
 
     /**
      * Tabs Handles
-     * 
+     *
      * @return UlTag
      */
     public function tabHandles()
@@ -76,7 +76,7 @@ class Tabs extends \Ease\Container
 
             $properties = [
                 'class' => 'nav-link',
-                'id' => $id.'-tab',
+                'id' => $id . '-tab',
                 'data-toggle' => 'tab',
                 'role' => 'tab',
                 'aria-controls' => $id,
@@ -86,15 +86,18 @@ class Tabs extends \Ease\Container
                 $properties['class'] .= ' active';
             }
 
-            $handles->addItemSmart(new \Ease\Html\ATag('#'.$id, $tabName,
-                    $properties), ['class' => 'nav-item']);
+            $handles->addItemSmart(new \Ease\Html\ATag(
+                '#' . $id,
+                $tabName,
+                $properties
+            ), ['class' => 'nav-item']);
         }
         return $handles;
     }
 
     /**
      * Tabs Bodies
-     * 
+     *
      * @return DivTag
      */
     public function tabBodies()
@@ -102,9 +105,11 @@ class Tabs extends \Ease\Container
         $body = new DivTag(null, ['class' => 'tab-content']);
         foreach ($this->tabs as $tabName => $tabContent) {
             $id  = self::strToID($tabName);
-            $tab = $body->addItem(new DivTag($tabContent,
-                    ['class' => 'tab-pane fade', 'id' => $id, 'role' => 'tabpanel',
-                    'aria-controlledby' => $id.'-tab']));
+            $tab = $body->addItem(new DivTag(
+                $tabContent,
+                ['class' => 'tab-pane fade', 'id' => $id, 'role' => 'tabpanel',
+                'aria-controlledby' => $id . '-tab']
+            ));
             if ($tabName == $this->activeTab) {
                 $tab->addTagClass('show active');
             }

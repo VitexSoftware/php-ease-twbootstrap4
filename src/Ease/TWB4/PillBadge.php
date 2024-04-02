@@ -7,7 +7,6 @@ namespace Ease\TWB4;
  */
 class PillBadge extends \Ease\Html\Span
 {
-
     /**
      * Rounded Bootstrap4's Badge
      *
@@ -20,6 +19,6 @@ class PillBadge extends \Ease\Html\Span
     public function __construct($type, $content = null, $properties = [])
     {
         parent::__construct($content, $properties);
-        $this->addTagClass('badge badge-pill badge-'.$type);
+        $this->addTagClass('badge badge-pill badge-' . $type);
     }
 }
