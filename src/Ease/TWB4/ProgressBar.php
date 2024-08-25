@@ -53,7 +53,7 @@ class ProgressBar extends \Ease\Html\DivTag {
             'aria-valuenow' => $value,
             'aria-valuemin' => $this->min,
             'aria-valuemax' => $this->max,
-            'style' => 'width: ' . $label . '%'
+            'style' => 'width: ' . $value . '%'
         ]);
     }
 }
