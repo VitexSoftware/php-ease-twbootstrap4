@@ -9,7 +9,7 @@ use Ease\TWB4\WebPage;
 
 include_once dirname(__DIR__) . '/vendor/autoload.php';
 
-new \Ease\Locale('en_US','','');
+new \Ease\Locale('en_US', '', '');
 $page = new WebPage(_('Page Example'));
 
 $page->addCss('

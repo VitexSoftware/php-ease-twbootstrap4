@@ -1,4 +1,10 @@
-php-vitexsoftware-ease-bootstrap4 (1.7) UNRELEASED; urgency=medium
+php-vitexsoftware-ease-bootstrap4 (1.8.0) UNRELEASED; urgency=medium
+
+  * ProgressBarr added
+
+ -- vitex <info@vitexsoftware.cz>  Sun, 25 Aug 2024 11:42:01 +0200
+
+php-vitexsoftware-ease-bootstrap4 (1.7) unstable; urgency=medium
 
   [ Vítězslav Dvořák ]
   * First release
@@ -20,4 +26,4 @@ php-vitexsoftware-ease-bootstrap4 (1.7) UNRELEASED; urgency=medium
   * Return added card
   * FormGroup do not crash on button
 
- -- CyberVitexus <vitex@exiv.jinonice.czf>  Wed, 17 Mar 2021 21:27:03 +0100
+ -- vitex <info@vitexsoftware.cz>  Sun, 25 Aug 2024 11:41:45 +0200

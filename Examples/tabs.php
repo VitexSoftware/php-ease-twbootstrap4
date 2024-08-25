@@ -5,7 +5,6 @@ namespace Ease\Example;
 use Ease\TWB4\Tabs;
 use Ease\TWB4\WebPage;
 
-
 include_once dirname(__DIR__).'/vendor/autoload.php';
 
 $oPage = new WebPage('Twitter Bootstrap 4 Tabs Example');

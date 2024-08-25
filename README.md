@@ -29,6 +29,7 @@ Ease Framework Twitter Bootstrap 4 Support
  * [Panel.php](src/Ease/TWB4/Panel.php) Bootstrap3 Compatibility
  * [Part.php](src/Ease/TWB4/Part.php)
  * [PillBadge.php](src/Ease/TWB4/PillBadge.php)
+ * [ProgressBar.php](src/Ease/TWB4/ProgressBar.php)
  * [Row.php](src/Ease/TWB4/Row.php)
  * [Badge.php](src/Ease/TWB4/Badge.php)
  * [Part.php](src/Ease/TWB4/Part.php)

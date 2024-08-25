@@ -39,21 +39,21 @@ html {
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 ');
 
-$topMenu = new \Ease\Html\DivTag( new \Ease\Html\H5Tag('Company name', ['class'=>'my-0 mr-md-auto font-weight-normal']),['class'=>'d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow'] );
+$topMenu = new \Ease\Html\DivTag(new \Ease\Html\H5Tag('Company name', ['class' => 'my-0 mr-md-auto font-weight-normal']), ['class' => 'd-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow']);
 
-$topMenuNav = new \Ease\Html\NavTag(null, ['class'=>'my-2 my-md-0 mr-md-3']);
-$topMenuNav->addItem( new \Ease\Html\ATag('#', 'Features', ['class'=>'p-2 text-dark']) );
-$topMenuNav->addItem( new \Ease\Html\ATag('#', 'Enterprise', ['class'=>'p-2 text-dark']) );
-$topMenuNav->addItem( new \Ease\Html\ATag('#', 'Support', ['class'=>'p-2 text-dark']) );
-$topMenuNav->addItem( new \Ease\Html\ATag('#', 'Pricing', ['class'=>'p-2 text-dark']) );
+$topMenuNav = new \Ease\Html\NavTag(null, ['class' => 'my-2 my-md-0 mr-md-3']);
+$topMenuNav->addItem(new \Ease\Html\ATag('#', 'Features', ['class' => 'p-2 text-dark']));
+$topMenuNav->addItem(new \Ease\Html\ATag('#', 'Enterprise', ['class' => 'p-2 text-dark']));
+$topMenuNav->addItem(new \Ease\Html\ATag('#', 'Support', ['class' => 'p-2 text-dark']));
+$topMenuNav->addItem(new \Ease\Html\ATag('#', 'Pricing', ['class' => 'p-2 text-dark']));
 
 $topMenu->addItem($topMenuNav);
-$topMenu->addItem( new \Ease\Html\ATag('#', 'Sign up', ['class'=>'btn btn-outline-primary']) );
+$topMenu->addItem(new \Ease\Html\ATag('#', 'Sign up', ['class' => 'btn btn-outline-primary']));
 
 $oPage->addItem($topMenu);
 
-$pricingHeader = new \Ease\Html\DivTag(  new \Ease\Html\H1Tag('Pricing', ['class'=>'display-4'])  );
-$pricingHeader->addItem( new \Ease\Html\PTag("Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.", ['class'=>'lead']) );
+$pricingHeader = new \Ease\Html\DivTag(new \Ease\Html\H1Tag('Pricing', ['class' => 'display-4']));
+$pricingHeader->addItem(new \Ease\Html\PTag("Quickly build an effective pricing table for your potential customers with this Bootstrap example. It's built with default Bootstrap components and utilities with little customization.", ['class' => 'lead']));
 
 $oPage->addItem($pricingHeader);
 
@@ -61,37 +61,37 @@ $container = $oPage->addItem(new \Ease\TWB4\Container());
 
 $cardDeck = new \Ease\Html\DivTag(null, ['class' => 'card-deck mb-3 text-center']);
 
-$freeCard = new \Ease\TWB4\Panel( 'Free', 'inverse', new \Ease\Html\H1Tag(['$0', new \Ease\Html\SmallTag('/ mo', ['class'=>'text-muted']) ]  ,['class'=>'card-title pricing-card-title'])  );
-$freeFeature = new \Ease\Html\UlTag(null,['style'=>'list-unstyled mt-3 mb-4']);
+$freeCard = new \Ease\TWB4\Panel('Free', 'inverse', new \Ease\Html\H1Tag(['$0', new \Ease\Html\SmallTag('/ mo', ['class' => 'text-muted']) ], ['class' => 'card-title pricing-card-title']));
+$freeFeature = new \Ease\Html\UlTag(null, ['style' => 'list-unstyled mt-3 mb-4']);
 $freeFeature->addItemSmart('10 users included');
 $freeFeature->addItemSmart('2 GB of storage');
 $freeFeature->addItemSmart('Email support');
 $freeFeature->addItemSmart('Help center access');
-        
+
 $freeCard->addItem($freeFeature);
-$freeCard->addItem( new \Ease\Html\ButtonTag('Sign up for free', ['type'=>'button','class'=>'btn btn-lg btn-block btn-outline-primary']) );
+$freeCard->addItem(new \Ease\Html\ButtonTag('Sign up for free', ['type' => 'button','class' => 'btn btn-lg btn-block btn-outline-primary']));
 
 
-$proCard = new \Ease\TWB4\Panel('Pro', 'inverse', new \Ease\Html\H1Tag(['$15', new \Ease\Html\SmallTag('/ mo', ['class'=>'text-muted']) ]  ,['class'=>'card-title pricing-card-title'])  );
-$proFeature = new \Ease\Html\UlTag(null,['style'=>'list-unstyled mt-3 mb-4']);
+$proCard = new \Ease\TWB4\Panel('Pro', 'inverse', new \Ease\Html\H1Tag(['$15', new \Ease\Html\SmallTag('/ mo', ['class' => 'text-muted']) ], ['class' => 'card-title pricing-card-title']));
+$proFeature = new \Ease\Html\UlTag(null, ['style' => 'list-unstyled mt-3 mb-4']);
 $proFeature->addItemSmart('20 users included');
 $proFeature->addItemSmart('10 GB of storage');
 $proFeature->addItemSmart('Phone and email support');
 $proFeature->addItemSmart('Help center access');
-        
+
 $proCard->addItem($proFeature);
-$proCard->addItem( new \Ease\Html\ButtonTag('Get started', ['type'=>'button','class'=>'btn btn-lg btn-block btn-primary']) );
+$proCard->addItem(new \Ease\Html\ButtonTag('Get started', ['type' => 'button','class' => 'btn btn-lg btn-block btn-primary']));
 
 
-$enterpriseCard = new \Ease\TWB4\Panel('Enterprise','inverse', new \Ease\Html\H1Tag(['$29', new \Ease\Html\SmallTag('/ mo', ['class'=>'text-muted']) ]  ,['class'=>'card-title pricing-card-title']) );
-$enterpriseFeature = new \Ease\Html\UlTag(null,['style'=>'list-unstyled mt-3 mb-4']);
+$enterpriseCard = new \Ease\TWB4\Panel('Enterprise', 'inverse', new \Ease\Html\H1Tag(['$29', new \Ease\Html\SmallTag('/ mo', ['class' => 'text-muted']) ], ['class' => 'card-title pricing-card-title']));
+$enterpriseFeature = new \Ease\Html\UlTag(null, ['style' => 'list-unstyled mt-3 mb-4']);
 $enterpriseFeature->addItemSmart('30 users included');
 $enterpriseFeature->addItemSmart('15 GB of storage');
 $enterpriseFeature->addItemSmart('Phone and email support');
 $enterpriseFeature->addItemSmart('Help center access');
-        
+
 $enterpriseCard->addItem($enterpriseFeature);
-$enterpriseCard->addItem( new \Ease\Html\ButtonTag('Contact us', ['type'=>'button','class'=>'btn btn-lg btn-block btn-primary']) );
+$enterpriseCard->addItem(new \Ease\Html\ButtonTag('Contact us', ['type' => 'button','class' => 'btn btn-lg btn-block btn-primary']));
 
 
 

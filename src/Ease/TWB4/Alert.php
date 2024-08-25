@@ -5,10 +5,10 @@ namespace Ease\TWB4;
 use Ease\Html\DivTag;
 
 /**
- * Twitter Bootrstap4 Alert.
+ * Twitter Bootstrap4 Alert.
  *
  * @author    Vitex <vitex@hippy.cz>
- * @copyright 2019 Vitex@hippy.cz (G)
+ * @copyright 2019-2024 Vitex@hippy.cz (G)
  */
 class Alert extends DivTag
 {
