@@ -63,4 +63,4 @@ Example Page
 
 See [Example](Examples/twb4.php)
 
-![Example](https://raw.githubusercontent.com/VitexSoftware/ease-bootstrap4/master/example.png)
+![Example](example.png?raw=true)
