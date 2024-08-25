@@ -25,6 +25,9 @@ class ProgressBar extends \Ease\Html\DivTag {
     /**
      * ProgressBar
      * 
+     * 
+     * @link https://getbootstrap.com/docs/4.0/components/progress/ 
+     * 
      * @param int     $value  0-100
      * @param string  $label  progress bar caption
      * @param string  $tweaks progress-bar-striped progress-bar-animated bg-info
