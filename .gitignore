@@ -17,3 +17,4 @@
 /.phpdoc/
 /docs/
 .vscode/settings.json
+/.php-cs-fixer.cache
