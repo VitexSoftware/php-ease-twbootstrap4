@@ -1,9 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * Twitter Bootstrap4 common class.
+ * This file is part of the EaseTWBootstrap4 package
  *
- * @author Vitex <vitex@hippy.cz>
+ * https://github.com/VitexSoftware/php-ease-twbootstrap4
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Ease\TWB4;
@@ -27,6 +34,7 @@ class Part extends \Ease\Part
         parent::jQueryze();
         \Ease\WebPage::singleton()->includeCSS(\Ease\WebPage::singleton()->bootstrapCSS);
         \Ease\WebPage::singleton()->includeJavaScript(\Ease\WebPage::singleton()->bootstrapJavaScript);
+
         return true;
     }
 }

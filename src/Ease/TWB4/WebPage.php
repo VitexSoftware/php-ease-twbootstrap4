@@ -1,5 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
+/**
+ * This file is part of the EaseTWBootstrap4 package
+ *
+ * https://github.com/VitexSoftware/php-ease-twbootstrap4
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Ease\TWB4;
 
 /**
@@ -8,35 +21,38 @@ namespace Ease\TWB4;
  * @author     Vítězslav Dvořák <vitex@hippy.cz>
  * @copyright  2017 Vitex@vitexsoftware.cz (G)
  *
- * @link       http://twitter.github.com/bootstrap/index.html
+ * @see       http://twitter.github.com/bootstrap/index.html
  */
 class WebPage extends \Ease\WebPage
 {
     /**
-     * Where to look for bootstrap stylesheet
+     * Where to look for bootstrap stylesheet.
+     *
      * @var string path or url
      */
-    public $bootstrapCSS = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+    public string $bootstrapCSS = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
 
     /**
-     * Where to look for bootstrap stylesheet theme
+     * Where to look for bootstrap stylesheet theme.
+     *
      * @var string path or url
      */
-    public $bootstrapThemeCSS = '';
+    public string $bootstrapThemeCSS = '';
 
     /**
-     * Where to look for bootstrap stylesheet scripts
+     * Where to look for bootstrap stylesheet scripts.
+     *
      * @var string path or url
      */
-    public $bootstrapJavaScript = 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js';
-    public $header = null;
-    public $main = null;
-    public $footer = null;
+    public string $bootstrapJavaScript = 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js';
+    public $header;
+    public $main;
+    public $footer;
 
     /**
      * Stránka s podporou pro twitter bootstrap.
      *
-     * @param string   $pageTitle
+     * @param string $pageTitle
      */
     public function __construct($pageTitle = null)
     {
@@ -44,46 +60,52 @@ class WebPage extends \Ease\WebPage
         Part::twBootstrapize();
 
         $this->head->addItem(
-            '<meta charset="utf-8">' .
-                '<meta name="viewport" content="width=device-width, initial-scale=1">'
+            '<meta charset="utf-8">'.
+                '<meta name="viewport" content="width=device-width, initial-scale=1">',
         );
     }
 
     public function addToHeader($content)
     {
-        if (is_null($this->header)) {
+        if (null === $this->header) {
             $this->header = new \Ease\Html\HeaderTag();
         }
+
         return $this->header->addItem($content);
     }
 
     public function addToMain($content)
     {
-        if (is_null($this->main)) {
+        if (null === $this->main) {
             $this->main = new \Ease\Html\MainTag();
         }
+
         return $this->main->addItem($content);
     }
 
     public function addToFooter($content)
     {
-        if (is_null($this->footer)) {
+        if (null === $this->footer) {
             $this->footer = new \Ease\Html\FooterTag();
         }
+
         return $this->footer->addItem($content);
     }
 
-    public function finalize()
+    public function finalize(): void
     {
-        if (is_null($this->header) === false) {
+        if ((null === $this->header) === false) {
             $this->addAsFirst($this->header);
         }
-        if (is_null($this->main) === false) {
+
+        if ((null === $this->main) === false) {
             $this->addItem($this->main);
         }
-        if (is_null($this->footer) === false) {
+
+        if ((null === $this->footer) === false) {
             $this->addItem($this->footer);
         }
+
         parent::finalize();
     }
 }

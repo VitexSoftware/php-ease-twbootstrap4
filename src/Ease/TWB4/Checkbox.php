@@ -1,7 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 /**
- * Checkbox pro TwitterBootstrap4.
+ * This file is part of the EaseTWBootstrap4 package
+ *
+ * https://github.com/VitexSoftware/php-ease-twbootstrap4
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace Ease\TWB4;
@@ -10,16 +19,14 @@ class Checkbox extends \Ease\Html\DivTag
 {
     /**
      * Odkaz na checkbox.
-     *
-     * @var \Ease\Html\CheckboxTag
      */
-    public $checkbox = null;
+    public \Ease\Html\CheckboxTag $checkbox = null;
 
     /**
      * Checkbox pro TwitterBootstrap4.
      *
      * @param string     $name
-     * @param string|int $value
+     * @param int|string $value
      * @param mixed      $content
      * @param bool       $checked
      * @param array      $properties
@@ -34,6 +41,6 @@ class Checkbox extends \Ease\Html\DivTag
         parent::__construct(null, ['class' => 'form-check']);
         $this->checkbox = $this->addItem(new \Ease\Html\CheckboxTag($name, $checked, $value, $properties));
         $this->checkbox->setTagID($name);
-        $this->addItem(new \Ease\Html\LabelTag($this->checkbox->getTagID(), $content)) ;
+        $this->addItem(new \Ease\Html\LabelTag($this->checkbox->getTagID(), $content));
     }
 }

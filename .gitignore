@@ -18,3 +18,6 @@
 /docs/
 .vscode/settings.json
 /.php-cs-fixer.cache
+/.build/
+/composer.lock
+/debian/files

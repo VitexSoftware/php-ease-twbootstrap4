@@ -1,25 +1,34 @@
 <?php
 
+declare(strict_types=1);
+
+/**
+ * This file is part of the EaseTWBootstrap4 package
+ *
+ * https://github.com/VitexSoftware/php-ease-twbootstrap4
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Ease\TWB4;
 
 /**
- * Bootstrap's Breadcrumb
+ * Bootstrap's Breadcrumb.
  */
 class Breadcrumb extends \Ease\Html\NavTag
 {
-    /**
-     *
-     * @var \Ease\Html\OlTag
-     */
-    public $ol;
+    public \Ease\Html\OlTag $ol;
 
     /**
-     * Bootstrap's Breadcrumb
+     * Bootstrap's Breadcrumb.
      *
-     * @link https://getbootstrap.com/docs/4.0/components/breadcrumb/
+     * @see https://getbootstrap.com/docs/4.0/components/breadcrumb/
      *
-     * @param mixed $content     to insert in
-     * @param array $properties  additional
+     * @param mixed $content    to insert in
+     * @param array $properties additional
      */
     public function __construct($content = null, $properties = [])
     {
@@ -29,7 +38,7 @@ class Breadcrumb extends \Ease\Html\NavTag
     }
 
     /**
-     * Add item into Breadcrumb
+     * Add item into Breadcrumb.
      *
      * @param mixed $pageItem
      *
@@ -41,7 +50,7 @@ class Breadcrumb extends \Ease\Html\NavTag
     }
 
     /**
-     * Add Page into Breadcrumb
+     * Add Page into Breadcrumb.
      *
      * @param string $name
      * @param string $url
@@ -54,7 +63,7 @@ class Breadcrumb extends \Ease\Html\NavTag
     }
 
     /**
-     * Add Current Page into Breadcrumb
+     * Add Current Page into Breadcrumb.
      *
      * @param string $name
      *

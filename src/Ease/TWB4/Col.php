@@ -1,5 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
+/**
+ * This file is part of the EaseTWBootstrap4 package
+ *
+ * https://github.com/VitexSoftware/php-ease-twbootstrap4
+ *
+ * (c) Vítězslav Dvořák <http://vitexsoftware.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Ease\TWB4;
 
 class Col extends \Ease\Html\DivTag
@@ -7,7 +20,7 @@ class Col extends \Ease\Html\DivTag
     /**
      * Bunka CSS tabulky bootstrapu.
      *
-     * @link  http://getbootstrap.com/css/#grid
+     * @see  http://getbootstrap.com/css/#grid
      *
      * @param int    $size       Velikost políčka 1 - 12
      * @param mixed  $content    Obsah políčka
@@ -20,14 +33,16 @@ class Col extends \Ease\Html\DivTag
         $target = 'md',
         $properties = []
     ) {
-        if (array_key_exists('class', $properties)) {
+        if (\array_key_exists('class', $properties)) {
             $addClass = $properties['class'];
         } else {
             $addClass = '';
         }
-        $properties['class'] = 'col-' . $target . '-' . $size;
+
+        $properties['class'] = 'col-'.$target.'-'.$size;
         parent::__construct($content, $properties);
-        if (strlen($addClass)) {
+
+        if (\strlen($addClass)) {
             $this->addTagClass($addClass);
         }
     }
