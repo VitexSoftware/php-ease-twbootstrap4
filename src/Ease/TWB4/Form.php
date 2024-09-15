@@ -28,7 +28,7 @@ class Form extends \Ease\Html\Form
      * @param array $formDivProperties FormDiv propertise eg. ['class'=>'form-row align-items-center']
      * @param mixed $formContents      Any other initial content
      */
-    public function __construct($formProperties = [], $formDivProperties = [], $formContents = null)
+    public function __construct(array $formProperties = [], array $formDivProperties = [], $formContents = null)
     {
         parent::__construct($formProperties);
         $this->formDiv = parent::addItem(new \Ease\Html\DivTag($formContents, $formDivProperties));

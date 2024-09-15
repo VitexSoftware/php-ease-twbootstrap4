@@ -29,7 +29,7 @@ class Badge extends \Ease\Html\SpanTag
      * @param mixed  $content    to insert in
      * @param array  $properties additional
      */
-    public function __construct($type, $content = null, $properties = [])
+    public function __construct($type, $content = null, array $properties = [])
     {
         parent::__construct($content, $properties);
         $this->addTagClass('badge badge-'.$type);

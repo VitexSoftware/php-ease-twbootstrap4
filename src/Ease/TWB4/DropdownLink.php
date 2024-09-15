@@ -28,15 +28,14 @@ class DropdownLink extends \Ease\Html\DivTag
      * Dropdown menu.
      *
      * @param string $heading
-     * @param string $type       one of primary|secondary|success|danger|warning|info|light|dark|link
+     * @param string $type    one of primary|secondary|success|danger|warning|info|light|dark|link
      * @param array  $items
-     * @param array  $properties
      */
     public function __construct(
         $heading,
         $type = 'link',
         $items = [],
-        $properties = []
+        array $properties = []
     ) {
         $properties['class'] = 'dropdown';
         $handle = $this->handle($heading, $type);

@@ -31,7 +31,7 @@ class Col extends \Ease\Html\DivTag
         $size,
         $content = null,
         $target = 'md',
-        $properties = []
+        array $properties = []
     ) {
         if (\array_key_exists('class', $properties)) {
             $addClass = $properties['class'];

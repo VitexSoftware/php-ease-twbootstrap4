@@ -30,7 +30,7 @@ class Breadcrumb extends \Ease\Html\NavTag
      * @param mixed $content    to insert in
      * @param array $properties additional
      */
-    public function __construct($content = null, $properties = [])
+    public function __construct($content = null, array $properties = [])
     {
         $properties['aria-label'] = 'breadcrumb';
         parent::__construct($content, $properties);

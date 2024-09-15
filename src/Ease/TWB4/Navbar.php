@@ -47,11 +47,10 @@ class Navbar extends NavTag
     private string $navBarName = 'nav';
 
     /**
-     * Menu aplikace.
+     * NavBar.
      *
      * @param string $brand
      * @param string $name
-     * @param array  $properties
      */
     public function __construct(
         $brand = null,

@@ -20,10 +20,10 @@ class Row extends \Ease\Html\DivTag
     /**
      * Twitter Bootrstap Row.
      *
-     * @param mixed $content    Prvotní obsah
+     * @param mixed $content    Initial content
      * @param array $properties Of Row Div
      */
-    public function __construct($content = null, $properties = [])
+    public function __construct($content = null, array $properties = [])
     {
         parent::__construct($content, $properties);
         $this->addTagClass('row');

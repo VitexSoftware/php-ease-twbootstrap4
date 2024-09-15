@@ -27,9 +27,9 @@ class Label extends Card
      *
      * @param string $type       alert|success|danger| etc...
      * @param mixed  $content    Content inside label
-     * @param array  $properties additonal properrties for Card
+     * @param array  $properties additional properties for Card
      */
-    public function __construct($type, $content, $properties = [])
+    public function __construct($type, $content, array $properties = [])
     {
         if (\array_key_exists('class', $properties)) {
             $properties['class'] = 'bg-'.$type.' '.$properties['class'];

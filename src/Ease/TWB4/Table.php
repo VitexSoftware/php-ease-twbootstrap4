@@ -28,7 +28,7 @@ class Table extends \Ease\Html\TableTag
      * @param mixed $content    tag content
      * @param array $properties table tag options
      */
-    public function __construct($content = null, $properties = [])
+    public function __construct($content = null, array $properties = [])
     {
         parent::__construct($properties, $content);
         $this->addTagClass('table');

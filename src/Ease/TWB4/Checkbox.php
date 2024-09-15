@@ -29,14 +29,13 @@ class Checkbox extends \Ease\Html\DivTag
      * @param int|string $value
      * @param mixed      $content
      * @param bool       $checked
-     * @param array      $properties
      */
     public function __construct(
         $name = null,
         $value = 'on',
         $content = null,
         $checked = false,
-        $properties = []
+        array $properties = []
     ) {
         parent::__construct(null, ['class' => 'form-check']);
         $this->checkbox = $this->addItem(new \Ease\Html\CheckboxTag($name, $checked, $value, $properties));

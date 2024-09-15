@@ -23,7 +23,7 @@ class ContainerFluid extends \Ease\Html\DivTag
      * @param mixed $content
      * @param array $properties of Container Row
      */
-    public function __construct($content = null, $properties = [])
+    public function __construct($content = null, array $properties = [])
     {
         parent::__construct($content, $properties);
         $this->addTagClass('container-fluid');

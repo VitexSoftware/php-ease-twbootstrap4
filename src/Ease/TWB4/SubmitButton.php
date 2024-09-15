@@ -27,7 +27,7 @@ class SubmitButton extends \Ease\Html\ButtonTag
      * @param string $type       primary|info|success|warning|danger|inverse|link
      * @param mixed  $properties
      */
-    public function __construct($value = null, $type = null, $properties = [])
+    public function __construct($value = null, $type = null, array $properties = [])
     {
         if (null === $type) {
             $properties['class'] = 'btn';

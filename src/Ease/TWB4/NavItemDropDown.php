@@ -16,21 +16,20 @@ declare(strict_types=1);
 namespace Ease\TWB4;
 
 /**
- * Description of Dropdown.
+ * Description of DropDown.
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
 class NavItemDropDown extends \Ease\Html\DivTag
 {
-    private \Ease\Html\DivTag $dropdownMenu = null;
+    private \Ease\Html\DivTag $dropdownMenu;
 
     /**
-     * Dropdown menu.
+     * DropDown menu.
      *
      * @param string $heading
-     * @param array  $items
      */
-    public function __construct($heading, $items = [])
+    public function __construct($heading, array $items = [])
     {
         $properties['class'] = 'nav-item dropdown';
         $handle = $this->handle($heading);
@@ -49,7 +48,7 @@ class NavItemDropDown extends \Ease\Html\DivTag
     }
 
     /**
-     * Dropdown handle.
+     * DropDown handle.
      *
      * @param string $heading
      *

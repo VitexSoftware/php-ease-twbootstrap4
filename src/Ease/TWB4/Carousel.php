@@ -34,16 +34,15 @@ class Carousel extends DivTag
     /**
      * Carousel.
      *
-     * @param bool  $controls   show controls ?
-     * @param bool  $indicators show indicators ?
-     * @param bool  $captions   show captions ?
-     * @param array $properties
+     * @param bool $controls   show controls ?
+     * @param bool $indicators show indicators ?
+     * @param bool $captions   show captions ?
      */
     public function __construct(
         $controls = true,
         $indicators = true,
         $captions = true,
-        $properties = []
+        array $properties = []
     ) {
         $this->showCaptions = $captions;
         $this->showIndicators = $indicators;

@@ -26,7 +26,7 @@ class Well extends Card
      * @param mixed $content
      * @param mixed $properties
      */
-    public function __construct($content = null, $properties = [])
+    public function __construct($content = null, array $properties = [])
     {
         parent::__construct($content, $properties);
         //        $this->addTagClass('well');
