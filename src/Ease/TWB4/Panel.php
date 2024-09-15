@@ -27,32 +27,32 @@ class Panel extends Card
     /**
      * Panel Head.
      */
-    public \Ease\Html\DivTag $header = null;
+    public \Ease\Html\DivTag $header;
 
     /**
      * Panel's body.
      */
-    public \Ease\Html\DivTag $body = null;
+    public \Ease\Html\DivTag $body;
 
     /**
      * footer content.
      */
-    public \Ease\Html\DivTag $footer = null;
+    public \Ease\Html\DivTag $footer;
 
     /**
      * Panel type.
      *
-     * @var string succes|wanring|info|danger
+     * @var string success|warning|info|danger
      */
     public string $type = 'default';
 
     /**
-     * Panel Twitter Bootstrapu.
+     * Twitter Bootstrap Panel.
      *
      * @param mixed|string $heading
-     * @param string       $type    succes|wanring|info|danger
-     * @param mixed        $body    tělo panelu
-     * @param mixed        $footer  patička panelu. FALSE = nezobrazit vůbec
+     * @param string       $type    success|wanring|info|danger
+     * @param mixed        $body    panel body
+     * @param mixed        $footer  panel foot FALSE = nezobrazit vůbec
      */
     public function __construct(
         $heading = null,
