@@ -33,12 +33,12 @@ class Navbar extends NavTag
     /**
      * Vnitřek menu.
      */
-    public array $leftContent = null;
+    public UlTag $leftContent;
 
     /**
      * Položky menu přidávané vpravo.
      */
-    public UlTag $rightContent = null;
+    public UlTag $rightContent;
 
     /**
      * Brand link destination.
@@ -56,7 +56,7 @@ class Navbar extends NavTag
     public function __construct(
         $brand = null,
         $name = 'navbar',
-        $properties = []
+        array $properties = []
     ) {
         if (\is_array($properties) && \array_key_exists('class', $properties)) {
             $originalClass = $properties['class'];
