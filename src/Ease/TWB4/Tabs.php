@@ -34,7 +34,8 @@ class Tabs extends \Ease\Container
     public function __construct($tabs = [], array $properties = [])
     {
         parent::__construct(null, $properties);
-        if($tabs){
+
+        if ($tabs) {
             $this->tabs = $tabs;
         }
     }
