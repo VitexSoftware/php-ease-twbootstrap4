@@ -48,15 +48,8 @@ Installation
 ------------
 
 ```
-composer require vitexsoftware/ease-bootstrap4
+composer require vitexsoftware/ease-twbootstrap4
 ```
-
-Also you can use debian package:
-
-```
-sudo apt install php-ease-bootstrap4
-```
-
 
 Example Page
 -------------

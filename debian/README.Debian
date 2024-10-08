@@ -1,6 +1,14 @@
 Ease framework TWB4 for Debian
 ------------------------------
     
+
+Also you can use debian package:
+
+```
+sudo apt install php-vitexsoftware-ease-bootstrap4
+```
+
+
     Is installed by standard way in /usr/share/php/EaseTWB4
 
 Then you can use system wide installed libraries in your package using this
