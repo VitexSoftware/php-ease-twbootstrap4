@@ -50,11 +50,9 @@ class WebPage extends \Ease\WebPage
     public $footer;
 
     /**
-     * Stránka s podporou pro twitter bootstrap.
-     *
-     * @param string $pageTitle
+     * Page with support for twitter bootstrap.
      */
-    public function __construct($pageTitle = null)
+    public function __construct(string $pageTitle = '')
     {
         parent::__construct($pageTitle);
         Part::twBootstrapize();
