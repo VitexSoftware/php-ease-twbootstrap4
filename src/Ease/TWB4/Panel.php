@@ -94,5 +94,6 @@ class Panel extends Card
         if ($this->footer->getItemsCount()) {
             parent::addItem($this->footer);
         }
+        parent::finalize();
     }
 }

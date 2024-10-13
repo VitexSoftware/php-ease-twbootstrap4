@@ -100,5 +100,6 @@ class DropdownLink extends \Ease\Html\DivTag
     public function finalize(): void
     {
         $this->addItem($this->dropdownMenu);
+        parent::finalize();
     }
 }
