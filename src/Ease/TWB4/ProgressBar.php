@@ -36,7 +36,7 @@ class ProgressBar extends \Ease\Html\DivTag
      * @param string $tweaks     progress-bar-striped progress-bar-animated bg-info
      * @param array  $properties of main div of progress bar
      */
-    public function __construct($value = 0, $label = '', $tweaks = '', array $properties = []): void
+    public function __construct($value = 0, $label = '', $tweaks = '', array $properties = [])
     {
         $properties['class'] = 'progress';
         parent::__construct($this->bar($value, $label, $tweaks), $properties);
@@ -51,7 +51,7 @@ class ProgressBar extends \Ease\Html\DivTag
      *
      * @return \Ease\Html\DivTag
      */
-    public function bar($value, $label = '', $tweaks = '')
+    public function bar($value, $label = '', $tweaks = ''): \Ease\Html\DivTag
     {
         return new \Ease\Html\DivTag($label, [
             'class' => 'progress-bar '.$tweaks,

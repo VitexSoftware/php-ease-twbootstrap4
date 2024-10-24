@@ -50,9 +50,9 @@ class Panel extends Card
      * Twitter Bootstrap Panel.
      *
      * @param mixed|string $heading
-     * @param string       $type    success|wanring|info|danger
+     * @param string       $type    success|warning|info|danger
      * @param mixed        $body    panel body
-     * @param mixed        $footer  panel foot FALSE = nezobrazit vůbec
+     * @param mixed        $footer  panel foot FALSE = do not show at all
      */
     public function __construct(
         $heading = null,
