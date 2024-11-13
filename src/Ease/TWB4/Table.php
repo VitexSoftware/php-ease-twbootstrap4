@@ -30,7 +30,7 @@ class Table extends \Ease\Html\TableTag
      */
     public function __construct($content = null, array $properties = [])
     {
-        parent::__construct($properties, $content);
+        parent::__construct($content,$properties);
         $this->addTagClass('table');
     }
 }
