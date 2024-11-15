@@ -121,13 +121,13 @@ class Navbar extends NavTag
     /**
      * Add Dropdown menu to nav.
      *
-     * @param string $label     submenu label
-     * @param array  $items     ['url'=>'label','url2'=>'label2','divider1'=>'',...]
-     * @param string $placement "left" is default
+     * @param string               $label     submenu label
+     * @param array<string,string> $items     ['url'=>'label','url2'=>'label2','divider1'=>'',...]
+     * @param string               $placement "left" is default
      *
      * @return NavItemDropDown
      */
-    public function addDropDownMenu($label, $items, $placement = 'left')
+    public function addDropDownMenu(string $label, array $items, string $placement = 'left')
     {
         return $this->addMenuItem(new NavItemDropDown($label, $items), true, $placement);
     }
@@ -135,9 +135,9 @@ class Navbar extends NavTag
     /**
      * Navbar collapse helper.
      *
-     * @return \Ease\Html\DivTagnavbar collapse
+     * @return \Ease\Html\DivTag navbar collapse
      */
-    public function navbarCollapse()
+    public function navbarCollapse(): DivTag
     {
         return new DivTag(
             [$this->leftContent, $this->rightContent],
@@ -151,7 +151,7 @@ class Navbar extends NavTag
         parent::finalize();
     }
 
-    public function navBarToggler()
+    public function navBarToggler(): ButtonTag
     {
         return new ButtonTag(
             new SpanTag(

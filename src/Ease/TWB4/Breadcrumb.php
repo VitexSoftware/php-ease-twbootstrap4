@@ -25,10 +25,10 @@ class Breadcrumb extends \Ease\Html\NavTag
     /**
      * Bootstrap's Breadcrumb.
      *
-     * @see https://getbootstrap.com/docs/4.0/components/breadcrumb/
+     * @see https://getbootstrap.com/docs/4.1/components/breadcrumb/
      *
-     * @param mixed $content    to insert in
-     * @param array $properties additional
+     * @param mixed                $content    to insert in
+     * @param array<string,string> $properties additional
      */
     public function __construct($content = null, array $properties = [])
     {

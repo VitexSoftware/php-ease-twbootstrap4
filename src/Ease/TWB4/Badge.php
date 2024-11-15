@@ -23,11 +23,11 @@ class Badge extends \Ease\Html\SpanTag
     /**
      * Návěstí bootstrapu.
      *
-     * @see http://getbootstrap.com/components/#badges
+     * @see https://getbootstrap.com/docs/4.6/components/badge/
      *
-     * @param string $type       success|info|warning|danger
-     * @param mixed  $content    to insert in
-     * @param array  $properties additional
+     * @param string               $type       success|info|warning|danger
+     * @param mixed                $content    to insert in
+     * @param array<string,string> $properties additional
      */
     public function __construct($type, $content = null, array $properties = [])
     {

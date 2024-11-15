@@ -27,7 +27,8 @@ class NavItemDropDown extends \Ease\Html\DivTag
     /**
      * DropDown menu.
      *
-     * @param string $heading
+     * @param string       $heading
+     * @param array<mixed> $items
      */
     public function __construct($heading, array $items = [])
     {

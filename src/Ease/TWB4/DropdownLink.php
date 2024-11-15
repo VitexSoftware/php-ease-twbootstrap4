@@ -22,7 +22,7 @@ namespace Ease\TWB4;
  */
 class DropdownLink extends \Ease\Html\DivTag
 {
-    private \Ease\Html\DivTag $dropdownMenu = null;
+    private \Ease\Html\DivTag $dropdownMenu;
 
     /**
      * Dropdown menu.

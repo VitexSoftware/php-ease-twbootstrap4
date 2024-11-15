@@ -20,8 +20,8 @@ class ContainerFluid extends \Ease\Html\DivTag
     /**
      * Twitter Bootrstap fluid Container.
      *
-     * @param mixed $content
-     * @param array $properties of Container Row
+     * @param mixed                $content
+     * @param array<string,string> $properties of Container Row
      */
     public function __construct($content = null, array $properties = [])
     {

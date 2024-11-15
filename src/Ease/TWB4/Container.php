@@ -21,7 +21,7 @@ class Container extends \Ease\Html\DivTag
      * Twitter Bootrstap Container.
      *
      * @param mixed $content
-     * @param array $properties of Container Row
+     * @param array<string,string> $properties of Container Row
      */
     public function __construct($content = null, array $properties = [])
     {

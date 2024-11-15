@@ -23,8 +23,8 @@ class Well extends Card
     /**
      * Twitter Bootrstap Well.
      *
-     * @param mixed $content
-     * @param mixed $properties
+     * @param mixed                $content
+     * @param array<string,string> $properties
      */
     public function __construct($content = null, array $properties = [])
     {

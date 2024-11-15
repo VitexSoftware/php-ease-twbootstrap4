@@ -24,11 +24,11 @@ use Ease\Html\DivTag;
  */
 class Carousel extends DivTag
 {
-    public $slides = [];
-    public $captions = [];
-    public $showCaptions = false;
-    public $showIndicators = false;
-    public $showControls = false;
+    public array $slides = [];
+    public array $captions = [];
+    public bool $showCaptions = false;
+    public bool $showIndicators = false;
+    public bool $showControls = false;
     public int $activeSlide = 0;
 
     /**

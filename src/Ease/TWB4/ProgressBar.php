@@ -29,12 +29,12 @@ class ProgressBar extends \Ease\Html\DivTag
     /**
      * ProgressBar.
      *
-     * @see https://getbootstrap.com/docs/4.0/components/progress/
+     * @see https://getbootstrap.com/docs/4.1/components/progress/
      *
-     * @param int    $value      0-100
-     * @param string $label      progress bar caption
-     * @param string $tweaks     progress-bar-striped progress-bar-animated bg-info
-     * @param array  $properties of main div of progress bar
+     * @param               int    $value      0-100
+     * @param               string $label      progress bar caption
+     * @param               string $tweaks     progress-bar-striped progress-bar-animated bg-info
+     * @param array<string,string> $properties additional properties
      */
     public function __construct($value = 0, $label = '', $tweaks = '', array $properties = [])
     {

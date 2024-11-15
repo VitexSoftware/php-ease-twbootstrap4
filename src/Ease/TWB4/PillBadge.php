@@ -18,16 +18,16 @@ namespace Ease\TWB4;
 /**
  * Rounded Bootstrap4's Badge.
  */
-class PillBadge extends \Ease\Html\Span
+class PillBadge extends \Ease\Html\SpanTag
 {
     /**
      * Rounded Bootstrap4's Badge.
      *
-     * @see http://getbootstrap.com/components/#badges
+     * @see https://getbootstrap.com/docs/4.1/components/badge/
      *
      * @param string $type       success|info|warning|danger
      * @param mixed  $content    to insert in
-     * @param array  $properties additional
+     * @param array<string,string> $properties additional properties
      */
     public function __construct($type, $content = null, array $properties = [])
     {

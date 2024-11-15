@@ -28,13 +28,13 @@ class Alert extends DivTag
     /**
      * Bootstrap4's Alert.
      *
-     * @see https://v4-alpha.getbootstrap.com/components/alerts/
+     * @see https://getbootstrap.com/docs/4.0/components/alerts/
      *
-     * @param string $type       success|info|warning|danger
-     * @param mixed  $content    to insert in
-     * @param array  $properties additional
+     * @param string               $type       success|info|warning|danger
+     * @param mixed                $content    to insert in
+     * @param array<string,string> $properties additional
      */
-    public function __construct($type, $content = null, array $properties = [])
+    public function __construct(string $type, $content = null, array $properties = [])
     {
         $properties['role'] = 'alert';
         parent::__construct($content, $properties);

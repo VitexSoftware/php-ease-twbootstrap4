@@ -27,17 +27,17 @@ class Panel extends Card
     /**
      * Panel Head.
      */
-    public \Ease\Html\DivTag $header;
+    public DivTag $header;
 
     /**
      * Panel's body.
      */
-    public \Ease\Html\DivTag $body;
+    public DivTag $body;
 
     /**
      * footer content.
      */
-    public \Ease\Html\DivTag $footer;
+    public DivTag $footer;
 
     /**
      * Panel type.
