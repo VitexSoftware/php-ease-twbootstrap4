@@ -30,7 +30,7 @@ class WebPage extends \Ease\WebPage
      *
      * @var string path or url
      */
-    public string $bootstrapCSS = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+    public string $bootstrapCSS = 'https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css';
 
     /**
      * Where to look for bootstrap stylesheet theme.
@@ -44,10 +44,10 @@ class WebPage extends \Ease\WebPage
      *
      * @var string path or url
      */
-    public string $bootstrapJavaScript = 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.js';
-    public $header;
-    public $main;
-    public $footer;
+    public string $bootstrapJavaScript = 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.js';
+    public \Ease\Html\HeaderTag $header;
+    public \Ease\Html\MainTag $main;
+    public \Ease\Html\FooterTag $footer;
 
     /**
      * Page with support for twitter bootstrap.
