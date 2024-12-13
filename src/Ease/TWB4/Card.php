@@ -27,12 +27,12 @@ class Card extends DivTag
     /**
      * Card.
      *
-     * @param string $content
-     * @param array<string,string>  $properties
+     * @param string                $content
+     * @param array<string, string> $properties
      */
     public function __construct($content = null, array $properties = [])
     {
-        if (\is_array($properties) && \array_key_exists('class', $properties)) {
+        if (\array_key_exists('class', $properties)) {
             $properties['class'] = 'card '.$properties['class'];
         } else {
             $properties['class'] = 'card';

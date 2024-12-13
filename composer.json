@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "vitexsoftware/ease-html": "^1.32"
+        "vitexsoftware/ease-html": "^1.40"
     },
     "autoload": {
         "psr-4": {
@@ -19,7 +19,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Test\\Ease\\": "vendor/vitexsoftware/ease-core/tests/src/Ease",
+            "Test\\Ease\\": ["vendor/vitexsoftware/ease-core/tests/src/Ease", "vendor/vitexsoftware/ease-html/tests/src/Ease/"],
             "Test\\Ease\\Html\\": "vendor/vitexsoftware/ease-html/tests/src/Ease/Html/",
             "Test\\Ease\\TWB4\\": "testing/src/Ease/TWB4/",
             "Test\\": "testing/",
@@ -29,9 +29,9 @@
     "require-dev": {
         "phpunit/phpunit": "*",
         "phpstan/phpstan": "*",
-        "friendsofphp/php-cs-fixer": "^3.61",
-        "ergebnis/composer-normalize": "^2.43",
-        "ergebnis/php-cs-fixer-config": "^6.34"
+        "friendsofphp/php-cs-fixer": "^3.65",
+        "ergebnis/composer-normalize": "^2.45",
+        "ergebnis/php-cs-fixer-config": "^6.39"
     },
     "config": {
         "allow-plugins": {

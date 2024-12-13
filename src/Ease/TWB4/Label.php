@@ -25,9 +25,9 @@ class Label extends Card
     /**
      * TWB3 Backward compatibility Label.
      *
-     * @param string               $type       alert|success|danger| etc...
-     * @param mixed                $content    Content inside label
-     * @param array<string,string> $properties additional properties for Card
+     * @param string                $type       alert|success|danger| etc...
+     * @param mixed                 $content    Content inside label
+     * @param array<string, string> $properties additional properties for Card
      */
     public function __construct($type, $content, array $properties = [])
     {

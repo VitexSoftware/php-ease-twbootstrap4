@@ -34,9 +34,10 @@ class Carousel extends DivTag
     /**
      * Carousel.
      *
-     * @param bool $controls   show controls ?
-     * @param bool $indicators show indicators ?
-     * @param bool $captions   show captions ?
+     * @param bool                  $controls   show controls ?
+     * @param bool                  $indicators show indicators ?
+     * @param bool                  $captions   show captions ?
+     * @param array<string, string> $properties
      */
     public function __construct(
         $controls = true,
@@ -59,7 +60,7 @@ class Carousel extends DivTag
     public function addSlide(
         \Ease\Embedable $content,
         $caption = '',
-        $active = false
+        bool $active = false
     ): void {
         $content->setTagClass('d-block w-100');
         $this->slides[] = $content;

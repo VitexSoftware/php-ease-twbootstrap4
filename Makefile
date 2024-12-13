@@ -28,7 +28,6 @@ cs: ## Update Coding Standards
 #libdir  ?= /usr/share/php/Ease
 #docdir  ?= /doc/ease-bootstrap/bootstrap
 
-all: build install
 
 fresh:
 	git pull origin master
@@ -62,7 +61,7 @@ composer:
 	composer update
 
 phpunit:
-	vendor/bin/phpunit --bootstrap tests/Bootstrap.php --configuration phpunit.xml
+	vendor/bin/phpunit --bootstrap tests/bootstrap.php --configuration phpunit.xml
 
 deb:
 	dch -i "`git log -1 --pretty=%B`"

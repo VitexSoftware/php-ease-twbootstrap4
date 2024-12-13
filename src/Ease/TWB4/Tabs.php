@@ -29,15 +29,18 @@ class Tabs extends \Ease\Container
     private string $activeTab = '';
 
     /**
-     * @param array $tabs
+     * @param array<string, \Ease\Embedable> $tabs
+     * @param array<string, string>          $properties
      */
     public function __construct($tabs = [], array $properties = [])
     {
-        parent::__construct(null, $properties);
+        parent::__construct();
 
         if ($tabs) {
             $this->tabs = $tabs;
         }
+
+        $this->setData($properties);
     }
 
     /**
@@ -47,7 +50,7 @@ class Tabs extends \Ease\Container
      * @param mixed  $content to render in tab body
      * @param bool   $active  add as active tab
      */
-    public function addTab($label, $content, $active = false)
+    public function addTab($label, mixed $content, bool $active = false)
     {
         $this->tabs[$label] = \Ease\Document::embedablize($content);
 

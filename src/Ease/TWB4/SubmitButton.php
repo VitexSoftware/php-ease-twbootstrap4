@@ -23,9 +23,9 @@ class SubmitButton extends \Ease\Html\ButtonTag
     /**
      * Odesílací tlačítko formuláře Twitter Bootstrapu.
      *
-     * @param string $value      vracená hodnota
-     * @param string $type       primary|info|success|warning|danger|inverse|link
-     * @param mixed  $properties
+     * @param string                $value      vracená hodnota
+     * @param string                $type       primary|info|success|warning|danger|inverse|link
+     * @param array<string, string> $properties
      */
     public function __construct($value = null, $type = null, array $properties = [])
     {

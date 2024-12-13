@@ -65,7 +65,7 @@ class WebPage extends \Ease\WebPage
 
     public function addToHeader($content)
     {
-        if ( $this->header) {
+        if ($this->header) {
             $this->header = new \Ease\Html\HeaderTag();
         }
 
@@ -74,7 +74,7 @@ class WebPage extends \Ease\WebPage
 
     public function addToMain($content)
     {
-        if (isset($this->main) ) {
+        if (isset($this->main)) {
             $this->main = new \Ease\Html\MainTag();
         }
 
@@ -83,7 +83,7 @@ class WebPage extends \Ease\WebPage
 
     public function addToFooter($content)
     {
-        if (isset($this->footer) ) {
+        if (isset($this->footer)) {
             $this->footer = new \Ease\Html\FooterTag();
         }
 

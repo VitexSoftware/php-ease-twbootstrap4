@@ -25,9 +25,9 @@ class PillBadge extends \Ease\Html\SpanTag
      *
      * @see https://getbootstrap.com/docs/4.1/components/badge/
      *
-     * @param string $type       success|info|warning|danger
-     * @param mixed  $content    to insert in
-     * @param array<string,string> $properties additional properties
+     * @param string                $type       success|info|warning|danger
+     * @param mixed                 $content    to insert in
+     * @param array<string, string> $properties additional properties
      */
     public function __construct($type, $content = null, array $properties = [])
     {

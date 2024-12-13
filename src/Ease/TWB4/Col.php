@@ -25,7 +25,7 @@ class Col extends \Ease\Html\DivTag
      * @param int                   $size       Column size 1 - 12
      * @param mixed                 $content    Content to put into Col div
      * @param string                $target     Device type xs|sm|md|lg
-     * @param array<string,string>  $properties Additional properties
+     * @param array<string, string> $properties Additional properties
      */
     public function __construct(
         $size,

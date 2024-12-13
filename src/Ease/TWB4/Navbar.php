@@ -97,9 +97,10 @@ class Navbar extends NavTag
                 $content->addTagClass('nav-link');
 
                 if (
-                    !empty($content->getTagProperty('href')) && 
-                    basename((string)parse_url($content->getTagProperty('href'),
-                    \PHP_URL_PATH,
+                    !empty($content->getTagProperty('href'))
+                    && basename((string) parse_url(
+                        $content->getTagProperty('href'),
+                        \PHP_URL_PATH,
                     )) === basename(Document::phpSelf())
                 ) {
                     $contentClass[] = 'active';
@@ -121,9 +122,9 @@ class Navbar extends NavTag
     /**
      * Add Dropdown menu to nav.
      *
-     * @param string               $label     submenu label
-     * @param array<string,string> $items     ['url'=>'label','url2'=>'label2','divider1'=>'',...]
-     * @param string               $placement "left" is default
+     * @param string                $label     submenu label
+     * @param array<string, string> $items     ['url'=>'label','url2'=>'label2','divider1'=>'',...]
+     * @param string                $placement "left" is default
      *
      * @return NavItemDropDown
      */

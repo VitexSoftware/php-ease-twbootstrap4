@@ -20,8 +20,8 @@ class Row extends \Ease\Html\DivTag
     /**
      * Twitter Bootrstap Row.
      *
-     * @param mixed                $content    Initial content
-     * @param array<string,string> $properties Of Row Div
+     * @param mixed                 $content    Initial content
+     * @param array<string, string> $properties Of Row Div
      */
     public function __construct($content = null, array $properties = [])
     {
