@@ -58,7 +58,7 @@ class Panel extends Card
         $heading = null,
         $type = null,
         $body = null,
-        $footer = null
+        $footer = null,
     ) {
         parent::__construct(null, $type ? ['class' => 'bg-'.$type] : []);
         $this->header = new DivTag($heading, ['class' => 'card-header']);
@@ -74,7 +74,7 @@ class Panel extends Card
      *
      * @return \Ease\Embedable Odkaz na vložený objekt
      */
-    public function &addItem(mixed $pageItem, string $pageItemName = ''): null|\Ease\Embedable
+    public function &addItem(mixed $pageItem, string $pageItemName = ''): ?\Ease\Embedable
     {
         $added = $this->body->addItem($pageItem, $pageItemName);
 

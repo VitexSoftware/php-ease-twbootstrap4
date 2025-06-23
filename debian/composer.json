@@ -1,7 +1,7 @@
 {
   "name": "deb/ease-bootstrap4",
   "description": "Set of Twitter Bootstrap 4 rendering objects (debianized)",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "authors": [
     {
       "name": "Vítězslav Dvořák",

@@ -31,7 +31,7 @@ class FormGroup extends \Ease\Html\DivTag
         $content = null,
         $placeholder = null,
         $helptext = null,
-        $addTagClass = 'form-control'
+        $addTagClass = 'form-control',
     ) {
         if (\is_object($content) && method_exists($content, 'getTagID')) {
             $id = $content->getTagID();

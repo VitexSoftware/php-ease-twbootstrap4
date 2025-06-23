@@ -43,7 +43,7 @@ class Carousel extends DivTag
         $controls = true,
         $indicators = true,
         $captions = true,
-        array $properties = []
+        array $properties = [],
     ) {
         $this->showCaptions = $captions;
         $this->showIndicators = $indicators;
@@ -60,7 +60,7 @@ class Carousel extends DivTag
     public function addSlide(
         \Ease\Embedable $content,
         $caption = '',
-        bool $active = false
+        bool $active = false,
     ): void {
         $content->setTagClass('d-block w-100');
         $this->slides[] = $content;

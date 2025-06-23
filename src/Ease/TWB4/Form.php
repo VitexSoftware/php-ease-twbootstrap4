@@ -46,7 +46,7 @@ class Form extends \Ease\Html\Form
         $input,
         $caption = null,
         $placeholder = null,
-        $helptext = null
+        $helptext = null,
     ) {
         return $this->addItem(new FormGroup(
             $caption,

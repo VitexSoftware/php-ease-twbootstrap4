@@ -1,8 +1,14 @@
-php-vitexsoftware-ease-bootstrap4 (1.9.1) UNRELEASED; urgency=medium
+php-vitexsoftware-ease-bootstrap4 (1.10.0) UNRELEASED; urgency=medium
+
+  * minimal supported php is 8.1
+
+ -- vitex <info@vitexsoftware.cz>  Tue, 24 Jun 2025 00:01:27 +0200
+
+php-vitexsoftware-ease-bootstrap4 (1.9.1) unstable; urgency=medium
 
   * unset default tab crash fixed
 
- -- vitex <info@vitexsoftware.cz>  Fri, 13 Dec 2024 02:35:48 +0100
+ -- vitex <info@vitexsoftware.cz>  Tue, 24 Jun 2025 00:01:11 +0200
 
 php-vitexsoftware-ease-bootstrap4 (1.9.0) unstable; urgency=medium
 

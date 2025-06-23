@@ -55,7 +55,7 @@ class Navbar extends NavTag
     public function __construct(
         $brand = null,
         $name = 'navbar',
-        array $properties = []
+        array $properties = [],
     ) {
         if (\is_array($properties) && \array_key_exists('class', $properties)) {
             $originalClass = $properties['class'];

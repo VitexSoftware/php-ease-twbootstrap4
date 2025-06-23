@@ -35,7 +35,7 @@ class DropdownLink extends \Ease\Html\DivTag
         $heading,
         $type = 'link',
         $items = [],
-        array $properties = []
+        array $properties = [],
     ) {
         $properties['class'] = 'dropdown';
         $handle = $this->handle($heading, $type);
