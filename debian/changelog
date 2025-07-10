@@ -1,8 +1,14 @@
-php-vitexsoftware-ease-bootstrap4 (1.10.0) UNRELEASED; urgency=medium
+php-vitexsoftware-ease-bootstrap4 (1.11.0) UNRELEASED; urgency=medium
+
+  * Split button added
+
+ -- vitex <info@vitexsoftware.cz>  Thu, 10 Jul 2025 22:51:05 +0200
+
+php-vitexsoftware-ease-bootstrap4 (1.10.0) unstable; urgency=medium
 
   * minimal supported php is 8.1
 
- -- vitex <info@vitexsoftware.cz>  Tue, 24 Jun 2025 00:01:27 +0200
+ -- vitex <info@vitexsoftware.cz>  Thu, 10 Jul 2025 22:50:42 +0200
 
 php-vitexsoftware-ease-bootstrap4 (1.9.1) unstable; urgency=medium
 
