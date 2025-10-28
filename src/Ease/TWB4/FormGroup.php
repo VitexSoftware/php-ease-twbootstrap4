@@ -45,6 +45,11 @@ class FormGroup extends \Ease\Html\DivTag
             $formKey = $id;
         }
 
+        // Ensure formKey is never null for LabelTag which requires string
+        if ($formKey === null) {
+            $formKey = 'formgroup_' . uniqid();
+        }
+
         $properties['class'] = 'form-group';
         parent::__construct(null, $properties);
         $this->addItem(new \Ease\Html\LabelTag($formKey, $label));
