@@ -1,8 +1,15 @@
-php-vitexsoftware-ease-bootstrap4 (1.11.0) UNRELEASED; urgency=medium
+php-vitexsoftware-ease-bootstrap4 (1.12.0) UNRELEASED; urgency=medium
 
+  * CardBody class addedd
+
+ -- Vítězslav Vitex Dvořák <info@vitexsoftware.cz>  Sun, 16 Nov 2025 22:53:25 +0100
+
+php-vitexsoftware-ease-bootstrap4 (1.11.0) noble; urgency=medium
+
+  [ vitex ]
   * Split button added
 
- -- vitex <info@vitexsoftware.cz>  Thu, 10 Jul 2025 22:51:05 +0200
+ -- Vítězslav Vitex Dvořák <info@vitexsoftware.cz>  Sun, 16 Nov 2025 22:53:10 +0100
 
 php-vitexsoftware-ease-bootstrap4 (1.10.0) unstable; urgency=medium
 
