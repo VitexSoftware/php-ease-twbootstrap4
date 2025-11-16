@@ -22,7 +22,7 @@ use Ease\Html\DivTag;
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
-class Card extends DivTag
+class CardBody extends DivTag
 {
     /**
      * Card.
