@@ -18,7 +18,9 @@ namespace Ease\TWB4;
 use Ease\Html\DivTag;
 
 /**
- * Description of Card Body
+ * Bootstrap 4 Card Body component.
+ * 
+ * Renders a div element with the 'card-body' CSS class for use within Bootstrap card components.
  *
  * @author Vítězslav Dvořák <info@vitexsoftware.cz>
  */
@@ -27,7 +29,7 @@ class CardBody extends DivTag
     /**
      * Card.
      *
-     * @param string                $content
+     * @param mixed                 $content    Content to be added to the card body
      * @param array<string, string> $properties
      */
     public function __construct($content = null, array $properties = [])
