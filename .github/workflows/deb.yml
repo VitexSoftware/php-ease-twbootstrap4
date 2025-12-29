@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build Debian package
-      uses: dawidd6/action-debian-package@v2
+      uses: dawidd6/action-debian-package@v3
     - name: github-action-publish-binaries
       uses: skx/github-action-publish-binaries@release-2.0
       env:
