@@ -1,3 +1,6 @@
+![Packaging: deb](https://img.shields.io/badge/packaging-.deb-red?logo=debian&logoColor=white)
+
+
 ![Project Logo](project-logo.png?raw=true)
 
 [![Latest Stable Version](https://poser.pugx.org/vitexsoftware/ease-twbootstrap4/v/stable)](https://packagist.org/packages/vitexsoftware/ease-twbootstrap4)
